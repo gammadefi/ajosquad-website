@@ -8,8 +8,8 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="w-full font-sora bg-black text-white py-16 px-8 md:px-16">
-      <div className='w-full gap-10 flex justify-between '>
-        <div className='md:w-1/2'>
+      <div className='w-full gap-10 flex md:flex-row flex-col justify-between '>
+        <div className='md:w-1/2 w-full'>
           <h2 className='md:text-4xl font-bold text-2xl'>Join Our Community</h2>
           <p className='text-xs md:text-sm font-normal mb-6 my-4'>Stay ahead of the curve with exclusive updates and unbeatable financial offers from Ajosquad. Subscribe now to be the first to discover the latest news from Ajosquad.</p>
 

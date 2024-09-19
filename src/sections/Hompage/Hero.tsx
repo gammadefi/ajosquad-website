@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import { FaArrowRight } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -10,7 +11,7 @@ const Hero = () => {
           <h3 className='md:text-7xl text-5xl text-center leading-[72px]  text-white font-medium font-ageo'>Empowering Your Financial Journey</h3>
           <h5 className='text-white md:text-xl text-center my-4 '>Simplifying savings, amplifying financial confidence.</h5>
 
-          <Link className=' text-lg mx-auto my-3 rounded-lg shadow shadow-[#2F2B431A] block w-[248px] text-center px-4 py-3 bg-white' href="/"><span className='gradient-text'>Get Started</span></Link>
+          <Link className=' text-lg mx-auto my-3 rounded-lg shadow shadow-[#2F2B431A] block w-[248px] text-center px-4 py-3 bg-white' href="/"><span className='gradient-text flex items-center justify-center gap-2'>Get Started <FaArrowRight className='gradient-text text-primary' /> </span></Link>
 
         </div>
 
