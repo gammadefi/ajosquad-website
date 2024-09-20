@@ -8,6 +8,7 @@ import MissionImage from '../../public/assets/MissionImage.svg'
 import ChartIcon from '../../public/assets/chart.svg'
 import { FaArrowRight } from "react-icons/fa6";
 import Hero from '../../src/sections/AboutPage/Hero'
+import TeamCard from '../../src/sections/AboutPage/Teamcard'
 
 const index = () => {
   return (
@@ -17,14 +18,16 @@ const index = () => {
       <section className='px-3 md:px-8 py-8 lg:py-20 lg:px-24'>
         <h1 className='mb-10 lg:mb-20 gradient-text font-bold text-3xl lg:text-5xl w-fit mx-auto'>About Us</h1>
         <div className='lg:flex items-center justify-between'>
-          <div className='lg:h-[600px] lg:w-1/2'>
+          <div className='lg:w-1/2'>
             <Image src={AboutImage} alt='About' className='h-full mx-auto' />
           </div>
           <div className='py-6 lg:py-0 lg:px-20 space-y-4 text-xl lg:text-2xl lg:w-1/2'>
             <p><span className='font-semibold'>Ajosquad</span>, a financial technology company that's focused on helping people save money and achieve their financial goals. Our company is founded on the belief that everyone deserves the opportunity to be financially secure, no matter their income level or financial experience. Our team is made up of experienced professionals who are passionate about helping people take control of their financial future.</p>
             <p>Our platform (AjoSquad) automates the process of community-based savings, allowing people to join a savings group, also known as a “Squad,” where members take turns receiving pooled funds. Our user-friendly platform is easy to navigate and provides a secure environment for all your financial transactions.</p>
-            <Link className='gradient-text flex items-center gap-2 text-lg rounded-lg px-4 py-3' href="/">
-              Read to know more on our blog... <FaArrowRight />
+            <Link href='' className="text-base block w-fit rounded-lg p-0.5 bg-gradient-to-r from-[#23454F] via-[#0066FF] to-[#1EB7CF]">
+              <div className="bg-white flex items-center gap-2 py-2 px-10 rounded-[calc(0.5rem-2px)]">
+                <span className='gradient-text'>Read to know more on our blog</span>
+              </div>
             </Link>
           </div>
         </div>
@@ -38,11 +41,11 @@ const index = () => {
           <p className='text-2xl lg:text-3xl font-extralight'>
             At Ajosquad, we believe that knowledge is the foundation of financial freedom! That's why we've incorporated Monthly Financial Education Classes into our offerings, tailored to empower our community with the tools they need to succeed.
           </p>
-          <button className="bg-gradient-to-r from-[#23454F] via-[#0066FF] to-[#1EB7CF] text-white font-semibold rounded-lg p-0.5">
-            <span className="bg-white text-black flex items-center gap-3 w-full rounded-lg p-2">
-              Read to know more on our blog... <FaArrowRight />
-            </span>
-          </button>
+          <Link href='' className="block w-fit rounded-lg p-0.5 bg-gradient-to-r from-[#23454F] via-[#0066FF] to-[#1EB7CF]">
+            <div className="bg-white flex items-center gap-2 py-2 px-10 rounded-[calc(0.5rem-2px)]">
+              <span className='gradient-text'>Read to know more on our blog</span>
+            </div>
+          </Link>
         </div>
       </section>
       <section className='px-6 py-10 lg:py-20 lg:px-24 bg-[#E8F5FB] text-xl md:text-3xl font-light'>
@@ -84,7 +87,7 @@ const index = () => {
             Meet the Visionaries Driving Your Global Success, Bringing a Wealth of Skills and Diverse Expertise from Various Backgrounds.
           </p>
         </div>
-        <div className='my-5 lg:my-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
+        <div className='my-5 lg:my-10 grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
           <TeamCard name='Team member name' description='Lorem ipsum dolor sit amet consectetur. Tortor euismod eu aliquam odio congue pellentesque eget. Amet proin vitae massa accumsan et commodo sed. Elementum dui ipsum urna tortor enim. Sollicitudin at egestas viverra a mauris id scelerisque purus cras. Maecenas in massa in purus dui orci. Elementum pretium sapien vulputate odio ipsum commodo. Facilisi sapien malesuada parturient ut phasellus. Ultricies ac viverra molestie at pretium.Lorem ipsum dolor sit amet consectetur.' role='Role' image={ChartIcon} />
           <TeamCard name='Team member name' description='Lorem ipsum dolor sit amet consectetur. Tortor euismod eu aliquam odio congue pellentesque eget. Amet proin vitae massa accumsan et commodo sed. Elementum dui ipsum urna tortor enim. Sollicitudin at egestas viverra a mauris id scelerisque purus cras. Maecenas in massa in purus dui orci. Elementum pretium sapien vulputate odio ipsum commodo. Facilisi sapien malesuada parturient ut phasellus. Ultricies ac viverra molestie at pretium.Lorem ipsum dolor sit amet consectetur.' role='Role' image={ChartIcon} />
           <TeamCard name='Team member name' description='Lorem ipsum dolor sit amet consectetur. Tortor euismod eu aliquam odio congue pellentesque eget. Amet proin vitae massa accumsan et commodo sed. Elementum dui ipsum urna tortor enim. Sollicitudin at egestas viverra a mauris id scelerisque purus cras. Maecenas in massa in purus dui orci. Elementum pretium sapien vulputate odio ipsum commodo. Facilisi sapien malesuada parturient ut phasellus. Ultricies ac viverra molestie at pretium.Lorem ipsum dolor sit amet consectetur.' role='Role' image={ChartIcon} />
@@ -99,23 +102,4 @@ const index = () => {
 export default index
 
 
-function TeamCard({ name, role, image, description }: { name: string, role: string, image: string, description: string }) {
-  return (
-    <div className="bg-gradient-to-r from-[#23454F] via-[#0066FF] to-[#1EB7CF] rounded-lg p-0.5">
-      <div className="bg-white rounded-lg p-3 lg:p-6 space-y-4 lg:space-y-8">
-        <div className="flex items-center gap-2">
-          <div className='h-14 w-14 rounded-full'>
-            <Image src={image} alt={name} className='w-full h-full rounded-full' />
-          </div>
-          <div>
-            <h3 className='font-semibold'>{name}</h3>
-            <p className='text-sm lg:text-base'>{role}</p>
-          </div>
-        </div>
-        <p>
-          {description}
-        </p>
-      </div>
-    </div>
-  )
-}
+
