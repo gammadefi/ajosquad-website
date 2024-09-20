@@ -24,6 +24,9 @@ module.exports = {
           hover: "#005ce6",         // Hover color for default
           active: "#0052cc",        // Active color for default
         },
+      },
+      backgroundImage: {
+        "hero-home": "url('/assets/home-hero.png')",
       }
     },
   },
