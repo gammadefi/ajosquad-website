@@ -1,6 +1,6 @@
 import React from 'react'
 import { Fade } from 'react-awesome-reveal'
-import ComingSoon from '../../../../public/assets/Coming Soon.svg'
+import ComingSoon from '../../../public/assets/Coming Soon.svg'
 import Image from 'next/image'
 
 const AjoHomesLaunching = () => {
