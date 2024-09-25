@@ -86,10 +86,10 @@ const Drawer = ({ isOpen, setIsOpen, hasHero }: INO) => {
 
                                         </Link>
                                         <Link
-                                            href="/products/ajo-homes"
+                                            href="/products/ajohomes"
                                             className={`pr-12  border-b  flex items-center text-base h-[50px] `}
                                         >
-                                            <span className={pathname === "/products/ajo-homes" ? "gradient-text font-semibold" : "text-black"}>AjoHomes <span className='text-[11px] ml-4 !-mt-3 gradient-text'>coming soon!!!</span></span>
+                                            <span className={pathname === "/products/ajohomes" ? "gradient-text font-semibold" : "text-black"}>AjoHomes <span className='text-[11px] ml-4 !-mt-3 gradient-text'>coming soon!!!</span></span>
 
                                         </Link>
                                     </>
@@ -111,10 +111,10 @@ const Drawer = ({ isOpen, setIsOpen, hasHero }: INO) => {
 
                                 </Link>
                                 <Link
-                                    href="/help"
+                                    href="/faq"
                                     className={`pr-12  border-b  flex items-center text-base h-[50px] `}
                                 >
-                                    <span className={pathname === "/help" ? "gradient-text font-semibold" : "text-black"}>Help</span>
+                                    <span className={pathname === "/faq" ? "gradient-text font-semibold" : "text-black"}>Help</span>
 
                                 </Link>
                             </div>

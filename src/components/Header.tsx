@@ -82,7 +82,7 @@ export default function Header({ hasHero }: { hasHero?: boolean }) {
                       AjoSquad
                     </Link>
                     <Link
-                      href="/products/ajo-homes"
+                      href="/products/ajohomes"
                       className="block px-4 py-2 text-black rounded-b-lg hover:bg-gray-100"
                     >
                       AjoHomes
@@ -97,7 +97,7 @@ export default function Header({ hasHero }: { hasHero?: boolean }) {
               <Link href="#" className="mx-6 font-sora font-medium">
                 Gallery
               </Link>
-              <Link href="#" className="mx-6 font-sora font-medium">
+              <Link href="/faq" className="mx-6 font-sora font-medium">
                 Help
               </Link>
             </div>
@@ -115,7 +115,7 @@ export default function Header({ hasHero }: { hasHero?: boolean }) {
             Login
           </Link>
           <Link
-            className="border text-white rounded-lg bg-primary hover:bg-primary-hover px-4 py-2"
+            className="text-white rounded-lg bg-primary hover:bg-primary-hover px-4 py-2"
             href=""
           >
             Sign Up
