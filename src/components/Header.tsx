@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import clsx from "clsx";
 import Drawer from "./Drawer";
 import { FaChevronDown } from "react-icons/fa";
+import useOnClickOutside from "../hooks/useClickOutside";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function Header({ hasHero }: { hasHero?: boolean }) {
   const { pathname, push } = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State for dropdown
-
+  const menuRef = useRef<any>();
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
   };
@@ -17,6 +19,11 @@ export default function Header({ hasHero }: { hasHero?: boolean }) {
   const toggleDropdown = () => {
     setIsDropdownOpen((prevState) => !prevState);
   };
+
+  useOnClickOutside(menuRef, () => {
+    setIsDropdownOpen(false)
+  });
+
 
   return (
     <>
@@ -26,7 +33,13 @@ export default function Header({ hasHero }: { hasHero?: boolean }) {
           hasHero ? "bg-opacity-10 !text-white absolute" : "bg-white bg-opacity-80"
         )}
       >
-        <div className="py-3 flex gap-12 items-center justify-between">
+        <div className="py-3  flex md:gap-12 items-center md:justify-between">
+          <button
+            onClick={toggleDrawer}
+            className="md:pr-12 pr-3 pl-4 inline-block lg:hidden"
+          >
+            <RxHamburgerMenu size={30} />
+          </button>
           <Link
             href="/"
             className="align-middle flex items-center justify-center gap-3 text-2xl font-bold text-[#03071e]"
@@ -44,10 +57,11 @@ export default function Header({ hasHero }: { hasHero?: boolean }) {
               </Link>
 
               {/* Products Dropdown */}
-              <div onMouseEnter={() => setIsDropdownOpen(true)}
+              <div ref={menuRef} onMouseEnter={() => setIsDropdownOpen(true)}
                 // onMouseLeave={() => setIsDropdownOpen(false)} // Option for hover-based dropdown
                 className="relative">
                 <button
+
                   className="mx-6 flex items-center gap-2 font-sora font-medium"
                   onClick={toggleDropdown}
                 // Option for hover-based dropdown
@@ -62,13 +76,13 @@ export default function Header({ hasHero }: { hasHero?: boolean }) {
                     className="absolute left-0 mt-2 w-[130px] divide-y bg-white shadow-lg rounded-lg"
                   >
                     <Link
-                      href="/ajosquad"
+                      href="/products/ajosquad"
                       className="block px-4 py-2 text-black rounded-t-lg hover:bg-gray-100"
                     >
                       AjoSquad
                     </Link>
                     <Link
-                      href="/ajohomes"
+                      href="/products/ajo-homes"
                       className="block px-4 py-2 text-black rounded-b-lg hover:bg-gray-100"
                     >
                       AjoHomes
@@ -90,7 +104,7 @@ export default function Header({ hasHero }: { hasHero?: boolean }) {
           </div>
         </div>
 
-        <div className="lg:flex gap-6 hidden items-center">
+        <div className="flex md:gap-6 gap-2  items-center">
           <Link
             className={clsx(
               "border rounded-lg px-4 py-2",
@@ -108,39 +122,8 @@ export default function Header({ hasHero }: { hasHero?: boolean }) {
           </Link>
         </div>
 
-        <button
-          onClick={toggleDrawer}
-          className="md:pr-12 pr-3 pl-4 inline-block lg:hidden"
-        >
-          <svg
-            className="mr-auto text-[#03071e]"
-            width="33"
-            height="50"
-            viewBox="0 0 23 30"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0.892578 10.8691H22.1058"
-              stroke="#03071e"
-              strokeLinecap="square"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M0.892578 18.8691H22.1058"
-              stroke="#03071e"
-              strokeLinecap="square"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M22.1066 14.8688H0.893399"
-              stroke="#03071e"
-              strokeLinecap="square"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-        <Drawer isOpen={isOpen} setIsOpen={toggleDrawer} />
+
+        <Drawer hasHero={hasHero ?? false} isOpen={isOpen} setIsOpen={toggleDrawer} />
       </div>
     </>
   );
