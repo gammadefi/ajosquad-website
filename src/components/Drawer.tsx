@@ -69,7 +69,7 @@ const Drawer = ({ isOpen, setIsOpen, hasHero }: INO) => {
 
                                 <button
                                     onClick={() => setOpenDrop(!openDrop)}
-                                    className={`pr-12 w-full  border-b  justify-between flex items-center text-base h-[50px] `}
+                                    className={`w-full  border-b  justify-between flex items-center text-base h-[50px] `}
                                 >
                                     <span className={pathname === "/*****" ? "gradient-text font-semibold" : "text-black"}>Product</span>
 
