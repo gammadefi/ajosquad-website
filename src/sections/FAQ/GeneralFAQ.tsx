@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import Accordion from './Accordion'
+import Accordion from '../../components/Accordion'
+import { faq } from './faqs'
+import { Fade, Slide } from 'react-awesome-reveal'
 
 const GeneralFAQ = () => {
   const items = [
@@ -22,8 +24,9 @@ const GeneralFAQ = () => {
   return (
     <div className='py-5 md:py-10 flex flex-col gap-5 md:gap-8 lg:w-full'>
       {
-        items.map((item) => (
-          <Accordion key={item.id} question={item.question} answer={item.answer} handleOnClick={() => handleClick(item.id)} open={item.id === selectedItem} />
+        faq.general.map((item, id) => (
+          
+            <Accordion key={id} question={item.question} answer={item.answer} handleOnClick={() => handleClick(id)} open={id === selectedItem} />
         ))
       }
     </div>

@@ -2,10 +2,11 @@ import Link from 'next/link';
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { Fade, Zoom } from 'react-awesome-reveal';
+import Image from 'next/image';
 
 const Howitworks = () => {
     return (
-        <div className='w-full py-8 md:py-24 px-3 md:px-8 lg:px-[96px] h-full'>
+        <div className='w-full py-8 md:pt-24 md:pb-20 px-3 md:px-8 lg:px-[96px] h-full'>
             <Fade direction="up" triggerOnce>
                 <h3 className='text-[#08354C] text-center font-bold text-4xl md:text-5xl'>
                     How it Works
@@ -51,13 +52,20 @@ const Howitworks = () => {
                 ))}
             </div>
 
-            <Fade direction="up" triggerOnce delay={500}>
-                <div className='text-center mt-8'>
-                    <Link className='text-[#08354C] text-lg font-semibold flex items-center gradiant-text justify-center hover:text-[#005b78] transition-colors' href="/learn-more">
-                        Learn More <FaArrowRight className='ml-2' />
-                    </Link>
-                </div>
-            </Fade>
+            <div className='mt-[60px]'>
+                <Fade direction='up' triggerOnce delay={400}>
+                    <h3 className='text-center text-[#A0A3A6] '>Out Partners</h3>
+                </Fade>
+                <Fade direction="up" triggerOnce delay={500}>
+                    <div className='text-center flex items-center justify-center gap-3 mt-3'>
+                        <Image src={"/assets/deborahomes.png"} alt='' width={120} height={64} />
+                        <Image src={"/assets/canada.png"} alt='' width={120} height={64} />
+
+                    </div>
+                </Fade>
+            </div>
+
+
         </div>
     );
 };

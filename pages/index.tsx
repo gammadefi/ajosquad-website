@@ -6,6 +6,8 @@ import Shortstory from '../src/sections/Hompage/Shortstory'
 import Products from '../src/sections/Hompage/Products'
 import Benefits from '../src/sections/Hompage/Benefits'
 import Howitworks from '../src/sections/Hompage/Howitworks'
+import Fag from '../src/sections/Hompage/Fag'
+import Security from '../src/sections/Hompage/Security'
 
 const index = () => {
   return (
@@ -16,6 +18,8 @@ const index = () => {
       <Products />
       <Benefits />
       <Howitworks />
+      <Security />
+      <Fag />
       <Footer />
     </div>
   )

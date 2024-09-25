@@ -3,6 +3,7 @@ import useOnClickOutside from '../hooks/useClickOutside';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FaChevronCircleUp, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { IoMdClose } from "react-icons/io";
 import clsx from 'clsx';
 
 interface INO {
@@ -31,7 +32,7 @@ const Drawer = ({ isOpen, setIsOpen, hasHero }: INO) => {
                     <div className="h-full  w-full  flex flex-col pr-1 justify-center">
                         <div
                             style={{ borderColor: "#EBEFF2" }}
-                            className="py-5 flex items-center justify-between  px-5"
+                            className="pt-5 flex items-center justify-between  px-5"
                         >
                             <Link
                                 href="/"
@@ -39,14 +40,15 @@ const Drawer = ({ isOpen, setIsOpen, hasHero }: INO) => {
                             >
                                 <img className="h-16 w-auto" alt="Ajosquad" src="/assets/logo.png" />
                             </Link>
-                            <img
+
+                            <IoMdClose
                                 onClick={() => {
                                     setIsOpen(false);
                                 }}
-                                src="/assets/close-nav.svg"
-                                className="w-8 h-auto col cursor-pointer"
-                                alt=""
+                                color='black'
+                                className="w-6 h-auto col cursor-pointer"
                             />
+
                         </div>
                         <div className="flex-1 relative scrollbar px-6 py-4 overflow-y-auto">
                             <div className="flex w-full justify-center gap-y-3 mx-auto flex-col">
@@ -124,14 +126,16 @@ const Drawer = ({ isOpen, setIsOpen, hasHero }: INO) => {
                                         "border  text-center rounded-lg px-4 py-2",
                                         "border-primary text-primary"
                                     )}
-                                    href=""
+                                    target='_blank'
+                                    href="https://app.ajosquad.com/squads/login"
                                 >
                                     <span className='gradient-text'>Login</span>
-                                    
+
                                 </Link>
                                 <Link
+                                    target='_blank'
                                     className="border w-full text-center text-white rounded-lg bg-primary hover:bg-primary-hover px-4 py-2"
-                                    href=""
+                                    href="https://app.ajosquad.com/register"
                                 >
                                     Sign Up
                                 </Link>

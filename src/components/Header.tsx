@@ -106,17 +106,19 @@ export default function Header({ hasHero }: { hasHero?: boolean }) {
 
         <div className="flex md:gap-6 gap-2  items-center">
           <Link
+            target='_blank'
             className={clsx(
               "border rounded-lg px-4 py-2",
               hasHero ? "border-white" : "border-primary text-primary"
             )}
-            href=""
+            href="https://app.ajosquad.com/squads/login"
           >
             Login
           </Link>
           <Link
+            target='_blank'
             className="text-white rounded-lg bg-primary hover:bg-primary-hover px-4 py-2"
-            href=""
+            href="https://app.ajosquad.com/register"
           >
             Sign Up
           </Link>
