@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import { Slide } from 'react-awesome-reveal'
-import ComingSoon from '../../../../public/assets/Coming Soon.svg'
-import HomeImage from '../../../../public/assets/House Image 2.png'
+import ComingSoon from '../../../public/assets/Coming Soon.svg'
+import HomeImage from '../../../public/assets/House Image 2.png'
 
 const IntroducingAjoHomes = () => {
   return (

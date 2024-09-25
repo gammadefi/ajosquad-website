@@ -5,7 +5,7 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const Hero = () => {
   return (
-    <div className="w-full bg-center bg-cover bg-no-repeat lg:h-[100vh] bg-[url('/assets/ProductAjohomeHeroImage.png')]">
+    <div className="w-full bg-center bg-cover bg-no-repeat lg:h-screen bg-[url('/assets/ProductAjohomeHeroImage.png')]">
       <div className='w-full h-full pt-32 lg:pt-20 pb-10 lg:pb-0 px-3 md:px-8 lg:px-[96px] flex items-center bg-black bg-opacity-40'>
         <Fade direction="down" triggerOnce>
           <div className='text-white flex flex-col gap-2'>

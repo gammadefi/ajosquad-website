@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import React from 'react';
-import { Slide } from 'react-awesome-reveal';
-import HomeImage from '../../../../public/assets/House Image 2(1).png';
+import Image from 'next/image'
+import React from 'react'
+import { Slide } from 'react-awesome-reveal'
+import HomeImage from '../../../public/assets/House Image 2(1).png'
 
 const HowAjoHomesWorks = () => {
   return (
