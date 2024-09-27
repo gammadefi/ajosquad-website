@@ -8,6 +8,7 @@ import Benefits from '../src/sections/Hompage/Benefits'
 import Howitworks from '../src/sections/Hompage/Howitworks'
 import Fag from '../src/sections/Hompage/Fag'
 import Security from '../src/sections/Hompage/Security'
+import Testimonial from '../src/sections/Hompage/Testimonial'
 
 const index = () => {
   return (
@@ -18,6 +19,7 @@ const index = () => {
       <Products />
       <Benefits />
       <Howitworks />
+      <Testimonial />
       <Security />
       <Fag />
       <Footer />
