@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const TestimonialCard = ({ name, image, testimonial }: { name: string, image: string, testimonial: string }) => {
   return (
-    <div className="inline-block p-3 lg:px-8 lg:py-7 w-[300px] lg:w-[437px] bg-[#101010] rounded-xl space-y-3">
+    <div className="p-3 lg:px-8 lg:py-7 w-[300px] lg:w-[437px] bg-[#101010] rounded-xl space-y-3">
       <p className='text-sm lg:text-lg'>
         {testimonial}
       </p>
