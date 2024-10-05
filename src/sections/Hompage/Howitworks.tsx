@@ -53,7 +53,7 @@ const Howitworks = () => {
                 ]
                     .map((item, index) => (
                         <Zoom triggerOnce delay={index * 150} key={index}>
-                            <div className='md:w-[300px] w-full mx-auto p-5 h-[170px] rounded-xl bg-[#EEEFF0] shadow-md hover:shadow-lg transition-shadow duration-300'>
+                            <div className='md:w-[300px] w-full mx-auto p-5 h-[210px] rounded-xl bg-[#EEEFF0] shadow-md hover:shadow-lg transition-shadow duration-300'>
                                 <h3 className='text-xl mx-auto font-semibold'>{item.title}</h3>
                                 <p className='font-light mt-2'>{item.description}</p>
                             </div>
