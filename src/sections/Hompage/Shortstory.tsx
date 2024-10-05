@@ -28,11 +28,15 @@ const Shortstory = () => {
                             <span className='font-bold'>Ajosquad</span>, a financial technology company that’s focused on helping people save money and achieve their financial goals. Our company is founded on the belief that everyone deserves the opportunity to be financially secure, no matter their income level or financial experience. Our team is made up of experienced professionals who are passionate about helping people take control of their financial future.
                         </p>
 
-                        <Link href="" className='flex items-center w-[160px] justify-center border my-4 rounded px-4 py-3 gap-2 gradient-text'>
+                        <Link href="/about" className='flex items-center w-[160px] justify-center border my-4 rounded px-4 py-3 gap-2 gradient-text'>
                             Read More <FaArrowRight className='text-primary font-thin' />
                         </Link>
 
                         {/* Stats Section */}
+
+                        <p className='md:text-2xl text-xl leading-7 font-light'>
+                            Our members have saved and we have made payouts of approx $420,000 in 9months with 0% default rate. We can call it <span className='font-semibold'>“Our Score Card”</span>
+                        </p>
                         <div className='flex my-8 justify-evenly md:justify-start items-center gap-12'>
                             <Zoom triggerOnce>
                                 <div>
@@ -48,7 +52,7 @@ const Shortstory = () => {
                             </Zoom>
                             <Zoom triggerOnce delay={400}>
                                 <div>
-                                    <h3 className='font-extrabold text-3xl gradient-text text-center md:text-4xl'>50+</h3>
+                                    <h3 className='font-extrabold text-3xl gradient-text text-center md:text-4xl'>30+</h3>
                                     <span className='text-sm text-center'>Completed Squad</span>
                                 </div>
                             </Zoom>

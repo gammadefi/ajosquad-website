@@ -20,8 +20,9 @@ const Hero = () => {
             </h5>
 
             <Link
+              target='_blank'
               className='text-lg mx-auto my-3 rounded-lg shadow shadow-[#2F2B431A] w-full block md:w-[248px] text-center px-4 py-3 bg-white'
-              href="/"
+              href="https://app.ajosquad.com/register"
             >
               <span className='gradient-text flex items-center justify-center gap-2'>
                 Get Started <FaArrowRight className='gradient-text text-primary' />

@@ -16,7 +16,7 @@ const KeyFeatures = () => {
                 <div className='grid md:grid-cols-2 px-5 grid-cols-1 lg:grid-cols-3 md:max-w-[980px] mx-auto items-center my-12 justify-center gap-5'>
                     <Zoom  delay={150} triggerOnce>
                         <div className='md:w-[300px] w-full mx-auto p-5 h-[200px] rounded-xl bg-[#EEEFF0]'>
-                            <h3 className='text-xl mx-auto font-semibold'>Automated Contributions</h3>
+                            <h3 className='text-xl mx-auto font-semibold'>Automated Savings</h3>
                             <p className='font-light md:text-base text-sm mt-2'>
                                 Say goodbye to manual contributions! Ajosquad automates bi-weekly deductions, ensuring consistent savings progress.
                             </p>
@@ -25,7 +25,7 @@ const KeyFeatures = () => {
 
                     <Zoom  delay={300} triggerOnce>
                         <div className='md:w-[300px] w-full mx-auto p-5 h-[200px] rounded-xl bg-[#EEEFF0]'>
-                            <h3 className='text-xl font-semibold'>Variety of Savings Groups</h3>
+                            <h3 className='text-xl font-semibold'>Variety of Savings Groups (Squad)</h3>
                             <p className='font-light md:text-base text-sm mt-2'>
                                 Choose a savings group that aligns with your budget - $200, $300, $500, or $1000 bi-weekly contribution options are available.
                             </p>
@@ -34,7 +34,7 @@ const KeyFeatures = () => {
 
                     <Zoom delay={450} triggerOnce>
                         <div className='md:w-[300px] w-full mx-auto p-5 h-[200px] rounded-xl bg-[#EEEFF0]'>
-                            <h3 className='text-xl font-semibold'>FINTRAC-Registered</h3>
+                            <h3 className='text-xl font-semibold'>Transparent and Secure</h3>
                             <p className='font-light md:text-base text-sm mt-2'>
                                 Ajosquad is a FINTRAC-registered company utilizing industry-leading payment processing (Gocardless) and verification (Shufti Pro) for your peace of mind.
                             </p>
@@ -61,7 +61,7 @@ const KeyFeatures = () => {
 
                     <Zoom delay={900} triggerOnce>
                         <div className='md:w-[300px] w-full mx-auto p-5 h-[200px] rounded-xl bg-[#EEEFF0]'>
-                            <h3 className='text-xl font-semibold'>Seamless Group Management</h3>
+                            <h3 className='text-xl font-semibold'>Simplified Group Formation</h3>
                             <p className='font-light md:text-base text-sm mt-2'>
                                 Eliminate the hassle of finding trustworthy individuals. Ajosquad facilitates seamless group joining and management.
                             </p>

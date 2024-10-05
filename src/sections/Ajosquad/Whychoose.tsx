@@ -33,7 +33,7 @@ const Whychoose = () => {
                 
             </Fade>
 
-            <Link href='' className="text-base block w-full md:w-fit rounded-lg p-0.5 bg-gradient-to-r from-[#23454F] via-[#0066FF] to-[#1EB7CF]">
+            <Link href='https://app.ajosquad.com/register' className="text-base block w-full md:w-fit rounded-lg p-0.5 bg-gradient-to-r from-[#23454F] via-[#0066FF] to-[#1EB7CF]">
               <div className="bg-white flex items-center justify-center gap-2 py-2 px-10 rounded-[calc(0.5rem-2px)]">
                 <span className='gradient-text'>Join now</span>
                 <FaArrowRight className='text-[#1EB7CF]' size={12} />
