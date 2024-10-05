@@ -14,7 +14,7 @@ const MissionAndVision = () => {
                 <h2 className='font-bold lg:text-xl'>Our Mission</h2>
               </div>
               <p className='lg:text-5xl'>
-                Our <span className='font-bold md:gradient-text'>mission</span> is to empower people to save and grow their money collectively by offering a user-friendly, secure, and automated solution for co-operative savings.
+                Our <span className='font-bold gradient-text'>mission</span> is to empower people to save and grow their money collectively by offering a user-friendly, secure, and automated solution for co-operative savings.
               </p>
             </div>
           </Slide>

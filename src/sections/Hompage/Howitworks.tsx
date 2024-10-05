@@ -20,36 +20,45 @@ const Howitworks = () => {
                 {[
                     {
                         title: "Create an Account",
-                        description: "Sign up through our user-friendly app (app.ajosquad.com). Provide necessary information needed to set up your account.",
+                        description: (
+                            <>
+                                Sign up through our user-friendly app (
+                                <a className='gradient-text' href="https://app.ajosquad.com" target="_blank" rel="noopener noreferrer">
+                                    app.ajosquad.com
+                                </a>
+                                ). Provide the necessary information . An email will be sent, click to confirm your email and log in to access your dashboard
+                            </>
+                        ),
                     },
                     {
-                        title: "Complete KYC",
-                        description: "Complete KYC (Know Your Customer). Verify your identity for a secure experience.",
+                        title: "Complete KYC/Agreement ",
+                        description: "Complete your KyC to verify your identity for a secure experience and sign your agreement forms for clarity and legal protection",
                     },
                     {
-                        title: "Connect Bank",
-                        description: "Link your bank account for seamless payouts.",
+                        title: "Join a squad and Connect Bank",
+                        description: "Join a squad of your choice and Link your bank to create a mandate and enjoy seamless automatic debits",
                     },
                     {
                         title: "Choose a Position",
-                        description: "Proceed to select a payment position of your choice.",
+                        description: "Proceed to select any available payout position of your choice",
                     },
                     {
                         title: "Add Payout Bank Details",
-                        description: "Provide your bank account information to receive your savings payout when your position is reached.",
+                        description: "Provide your bank information to automatically receive your payout once due.",
                     },
                     {
                         title: "Monitor Progress",
-                        description: "Track your contributions and monitor your squad’s progress through the dashboard.",
+                        description: "Track your contributions and monitor your squad's progress through the dashboard.",
                     }
-                ].map((item, index) => (
-                    <Zoom triggerOnce delay={index * 150} key={index}>
-                        <div className='md:w-[300px] w-full mx-auto p-5 h-[170px] rounded-xl bg-[#EEEFF0] shadow-md hover:shadow-lg transition-shadow duration-300'>
-                            <h3 className='text-xl mx-auto font-semibold'>{item.title}</h3>
-                            <p className='font-light mt-2'>{item.description}</p>
-                        </div>
-                    </Zoom>
-                ))}
+                ]
+                    .map((item, index) => (
+                        <Zoom triggerOnce delay={index * 150} key={index}>
+                            <div className='md:w-[300px] w-full mx-auto p-5 h-[170px] rounded-xl bg-[#EEEFF0] shadow-md hover:shadow-lg transition-shadow duration-300'>
+                                <h3 className='text-xl mx-auto font-semibold'>{item.title}</h3>
+                                <p className='font-light mt-2'>{item.description}</p>
+                            </div>
+                        </Zoom>
+                    ))}
             </div>
 
             <div className='mt-[60px]'>

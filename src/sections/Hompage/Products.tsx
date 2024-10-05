@@ -21,7 +21,7 @@ const Products = () => {
 
                         <Fade direction="up" triggerOnce delay={400}>
                             <p className='my-4 font-[200] text-xl md:text-4xl'>
-                                Our Product (<span className='gradient-text font-medium'>AjoSquad</span>) is a platform that gives members the enablement to pool funds together and take turns receiving pooled funds.
+                                <span className='gradient-text font-medium'>AjoSquad</span> is a platform that gives members the enablement to pool funds together and take turns receiving pooled funds.
                             </p>
                         </Fade>
 
@@ -36,7 +36,7 @@ const Products = () => {
                         </Fade>
 
                         <Fade triggerOnce delay={1000}>
-                            <Link href="" className='flex items-center w-[160px] justify-center border border-primary my-4 rounded px-4 py-3 gap-2 gradient-text'>
+                            <Link href="http://localhost:3000/products/ajosquad" className='flex items-center w-[160px] justify-center border border-primary my-4 rounded px-4 py-3 gap-2 gradient-text'>
                                 Read More <FaArrowRight className='text-primary font-thin' />
                             </Link>
                         </Fade>
@@ -69,7 +69,7 @@ const Products = () => {
                         </Fade>
 
                         <Fade triggerOnce delay={1200}>
-                            <Link href="" className='flex items-center w-[160px] justify-center border border-primary my-4 rounded px-4 py-3 gap-2 gradient-text'>
+                            <Link href="http://localhost:3000/products/ajohomes" className='flex items-center w-[160px] justify-center border border-primary my-4 rounded px-4 py-3 gap-2 gradient-text'>
                                 Read More <FaArrowRight className='text-primary font-thin' />
                             </Link>
                         </Fade>

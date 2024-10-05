@@ -28,7 +28,7 @@ const Benefits = () => {
 
                         <Fade direction="up" triggerOnce delay={400}>
                             <p className='text-white font-extralight my-4 text-2xl md:text-4xl leading-[44px]'>
-                                Becoming financially free by joining a Squad in AjoSquad and boosting your saving capability.
+                                Become Financially free by joining a <span className='font-semibold'>squad</span> and boost your savings capability.
                             </p>
                         </Fade>
 

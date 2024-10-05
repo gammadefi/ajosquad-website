@@ -91,10 +91,10 @@ export default function Header({ hasHero }: { hasHero?: boolean }) {
                 )}
               </div>
 
-              <Link href="#" className="mx-6 font-sora font-medium">
+              <Link href="/blog" className="mx-6 font-sora font-medium">
                 Blog
               </Link>
-              <Link href="#" className="mx-6 font-sora font-medium">
+              <Link href="/gallery" className="mx-6 font-sora font-medium">
                 Gallery
               </Link>
               <Link href="/faq" className="mx-6 font-sora font-medium">
