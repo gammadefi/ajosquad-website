@@ -66,7 +66,7 @@ const Howitworks = () => {
                     <h3 className='text-center text-[#A0A3A6] '>Out Partners</h3>
                 </Fade>
                 <Fade direction="up" triggerOnce delay={500}>
-                    <div className='text-center flex items-center justify-center gap-3 mt-3'>
+                    <div className='text-center flex items-center justify-center gap-8 mt-3'>
                         <Image src={"/assets/deborahomes.png"} alt='' width={120} height={64} />
                         <Image src={"/assets/canada.png"} alt='' width={120} height={64} />
 

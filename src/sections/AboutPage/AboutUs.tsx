@@ -33,7 +33,7 @@ const AboutUs = () => {
             <p  className='font-[300]'>
               Our platform automates community-based savings, enabling people to join savings groups known as "Squads," where members take turns receiving pooled funds. The platform is user-friendly and provides a secure environment for all financial transactions.
             </p>
-            <Link href='' className="text-base block w-fit rounded-lg p-0.5 bg-gradient-to-r from-[#23454F] via-[#0066FF] to-[#1EB7CF]">
+            <Link href='/blog' className="text-base block w-fit rounded-lg p-0.5 bg-gradient-to-r from-[#23454F] via-[#0066FF] to-[#1EB7CF]">
               <div className="bg-white flex items-center gap-2 py-2 px-10 rounded-[calc(0.5rem-2px)]">
                 <span className='gradient-text'>Read to know more on our blog</span>
               </div>
