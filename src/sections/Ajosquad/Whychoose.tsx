@@ -17,7 +17,7 @@ const Whychoose = () => {
             {/* Reveal effect for the paragraph content */}
             <Fade direction="up" className='md:my-12 my-8' delay={100} triggerOnce={true}>
                 <p className='md:text-[29px]  !tracking-[-1.8%] leading-[28px] md:leading-[36px] font-extralight'>
-                    Ajosquad is born from a desire to empower immigrants in Canada. We understand the financial hurdles newcomers face when establishing themselves in a new country. Ajosquad bridges the gap by reviving the familiar group savings concept in a modern, secure, and automated format. 
+                    Ajosquad was born from a desire to empower immigrants in Canada. We understand the financial hurdles newcomers face when establishing themselves in a new country. Ajosquad bridges the gap by reviving the familiar group savings concept in a modern, secure, and automated format. 
                 </p>
                 <p className='md:text-[29px]  -mt-8 !tracking-[-1.8%] leading-[28px] md:leading-[36px] font-extralight'>
                     Traditional group savings can be cumbersome, fraught with challenges like finding reliable participants, managing collection schedules, and handling defaults. Ajosquad tackles these issues head-on, offering a convenient and secure alternative.

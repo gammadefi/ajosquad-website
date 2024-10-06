@@ -12,7 +12,7 @@ const Hero = () => {
             <h3 className='lg:w-4/5 md:text-7xl text-3xl lg:leading-[72px] font-light font-ageo'>
               Effortless Savings, Maximum Returns.
             </h3>
-            <Link className='text-lg my-3 rounded-lg shadow shadow-[#2F2B431A] block w-full md:w-fit text-center px-4 py-3 md:px-16 bg-white' href="/"><span className='gradient-text'>Try Ajosquad now</span></Link>
+            <Link className='text-lg my-3 rounded-lg shadow shadow-[#2F2B431A] block w-full md:w-fit text-center px-4 py-3 md:px-16 bg-white' href="https://app.ajosquad.com/register"><span className='gradient-text'>Try Ajosquad now</span></Link>
           </div>
         </Fade>
       </div>

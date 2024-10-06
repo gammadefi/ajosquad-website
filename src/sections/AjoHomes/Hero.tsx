@@ -16,7 +16,7 @@ const Hero = () => {
             <h3 className='lg:w-11/12 md:text-5xl lg:text-7xl text-3xl lg:leading-[72px] font-light font-ageo'>
               A Novel Way to Invest in Real Estate
             </h3>
-            <Link className='text-lg my-3 rounded-lg shadow shadow-[#2F2B431A] block w-full md:w-fit text-center px-4 py-3 md:px-10 bg-white' href="/">
+            <Link className='text-lg my-3 rounded-lg shadow shadow-[#2F2B431A] block w-full md:w-fit text-center px-4 py-3 md:px-10 bg-white' href="https://app.ajosquad.com/register">
               <span className='gradient-text flex gap-2 items-center justify-center'>
                 Try AjoHomes now
                 <FaArrowRight className='text-primary' />

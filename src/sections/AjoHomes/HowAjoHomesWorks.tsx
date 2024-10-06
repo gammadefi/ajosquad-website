@@ -17,7 +17,7 @@ const HowAjoHomesWorks = () => {
         {/* Slide-in effect for the text */}
         <Slide className='lg:w-1/2' direction='left' triggerOnce>
           <p className='py-6 font-extralight lg:py-0 lg:px-32 text-xl lg:text-2xl'>
-            With <span className='gradient-text font-semibold'>Ajosquad</span>, you have the opportunity to invest in a property by buying units, where each unit is priced at $1,000. You can purchase multiple units, allowing you to tailor your investment to your financial goals and capacity. This form of investment democratizes access to real estate, enabling you to own a part of an investment property and share in its future appreciation.
+            With <span className='gradient-text font-semibold'>AjoHomes</span>, you have the opportunity to invest in a property by buying units, where each unit is priced at $1,000. You can purchase multiple units, allowing you to tailor your investment to your financial goals and capacity. This form of investment democratizes access to real estate, enabling you to own a part of an investment property and share in its future appreciation.
           </p>
         </Slide>
 
