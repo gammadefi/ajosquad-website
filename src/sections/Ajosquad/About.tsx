@@ -5,18 +5,18 @@ const About = () => {
     return (
         <div className='w-full py-8 md:p-24 px-5 md:px-8 lg:px-[80px] h-full'>
             {/* Wrap the h3 element in the Fade component for a reveal effect */}
-            <Fade direction="up" triggerOnce={true}>
+            {/* <Fade direction="up" triggerOnce={true}>
                 <h3 className='text-[#08354C] text-center font-bold text-3xl md:text-5xl'>
                     AjoSquad
                 </h3>
-            </Fade>
+            </Fade> */}
 
             {/* Reveal effect for the subtitle */}
-            <Fade direction="up" delay={100} triggerOnce={true}>
+            {/* <Fade direction="up" delay={100} triggerOnce={true}>
                 <h5 className='text-[#08354C] my-5 font-normal text-lg md:text-2xl text-center'>
                     Pool together, Prosper together
                 </h5>
-            </Fade>
+            </Fade> */}
 
             {/* Reveal effect for the paragraph content */}
             <Fade direction="up" delay={200} triggerOnce={true}>
