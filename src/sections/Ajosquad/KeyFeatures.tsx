@@ -27,7 +27,7 @@ const KeyFeatures = () => {
                         <div className='md:w-[300px] w-full mx-auto p-5 h-[200px] rounded-xl bg-[#EEEFF0]'>
                             <h3 className='text-xl font-semibold'>Variety of Savings Groups (Squad)</h3>
                             <p className='font-light md:text-base text-sm mt-2'>
-                                Choose a savings group that aligns with your budget - $200, $300, $500, or $1000 bi-weekly contribution options are available.
+                                Choose a savings group that aligns with your budget - $200, $300, $500, or $1000 twice monthly contribution options are available.
                             </p>
                         </div>
                     </Zoom>
@@ -45,7 +45,7 @@ const KeyFeatures = () => {
                         <div className='md:w-[300px] w-full mx-auto p-5 h-[200px] rounded-xl bg-[#EEEFF0]'>
                             <h3 className='text-xl font-semibold'>Default Protection</h3>
                             <p className='font-light md:text-base text-sm mt-2'>
-                                Don't worry about missed payments! Ajosquad has you covered. We handle defaults and ensure the group savings cycle continues uninterrupted.
+                                Don't worry about missed payments from others! Ajosquad has you covered. We handle defaults and ensure the group savings cycle continues uninterrupted.
                             </p>
                         </div>
                     </Zoom>
