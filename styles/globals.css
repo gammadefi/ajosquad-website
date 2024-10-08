@@ -63,3 +63,19 @@
     font-family: 'Outfit', sans-serif;
     scroll-behavior: smooth;
 }
+
+.custom-scrollbar {
+    --scrollbar-bg: #888; /* Default color */
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-bg) transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-bg);
+    border-radius: 10px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  

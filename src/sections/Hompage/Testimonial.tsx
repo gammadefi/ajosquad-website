@@ -18,7 +18,7 @@ const Testimonial = () => {
           <p>transforming finances, transforming lives</p>
         </div>
       </div>
-      <div className='-mr-5 md:-mr-10 lg:-mr-44 overflow-x-scroll'>
+      <div className='-mr-5 md:-mr-10 lg:-mr-44 custom-scrollbar overflow-hidden hover:overflow-x-scroll'>
         <div className='w-fit py-5 flex gap-5 lg:gap-10 pr-5 md:pr-10 lg:pr-32'>
           <TestimonialCard name='Joseph & Emily' image={Avatar} testimonial='As an immigrant, saving money for the down-payment on a house seemed like an insurmountable task.
               We had the strong desire to do this, but for over a year, we were overwhelmed, with bills, bills, and other expenses constantly derailing our goals.
