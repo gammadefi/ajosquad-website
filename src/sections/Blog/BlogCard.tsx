@@ -18,7 +18,7 @@ export type BlogCardType = {
   description: string,
   publishDate: string,
   readTime: string,
-  isRecentBlogSection: boolean,
+  isRecentBlogSection?: boolean,
   tags: {
     name: string
   }[],
@@ -27,7 +27,7 @@ export type BlogCardType = {
 
 const BlogCard = ({ id, title, imgUrl, description, publishDate, readTime, tags, comments, isRecentBlogSection }: BlogCardType) => {
   return (
-    <div className='w-full max-w-[400px] space-y-1.5'>
+    <div className='w-full md:max-w-[400px] space-y-1.5'>
       {/* TODO: update img tag to Next.js Image component  */}
       <img src={imgUrl} alt={`Blog image: ${title}`} className='rounded-xl w-full' width={300} height={200} />
       <div className='text-[#676767] text-sm flex justify-between'>

@@ -12,8 +12,8 @@ const RecentBlog = () => {
   return (
     <section className='px-4 md:p-10 lg:px-24 2xl:px-28 py-10 md:py-20'>
       <h3 className='text-2xl lg:text-4xl font-semibold mb-5 md:mb-10'>Recent blog post</h3>
-      <div className='flex flex-col lg:flex-row gap-5 lg:gap-10'>
-        <div className='lg:w-2/3 space-y-2 md:space-y-3'>
+      <div className='grid lg:grid-cols-3 grid-cols-1 w-full lg:flex-row gap-5 lg:gap-10'>
+        <div className='lg:col-span-2 space-y-2 md:space-y-3'>
           <div className='relative w-full'>
             <img src={recentBlog.imgUrl} alt={`Blog image: ${recentBlog.title}`} className='rounded-xl w-full h-[204px] md:h-[376px] object-cover' width={300} height={200} />
             <div className='text-white bg-[#45B175] absolute top-4 right-4 rounded-lg px-5 py-1 lg:py-2'>
@@ -47,8 +47,8 @@ const RecentBlog = () => {
             </Link>
           </div>
         </div>
-        <div className='-mx-4 md:-mx-10 lg:-mx-24 lg:w-1/3 overflow-x-scroll'>
-          <div className='w-[750px] md:w-fit flex lg:flex-col gap-5 px-4 md:px-10 lg:px-24'>
+        <div className=' lg:col-span-1 col-span-1  w-full overflow-x-scroll'>
+          <div className='w-full flex lg:flex-col gap-5 px-4'>
             {
               sideBlogs.map((blog) => (
                 <BlogCard

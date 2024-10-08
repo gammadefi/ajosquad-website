@@ -1,6 +1,6 @@
 import { BlogCardType } from "./BlogCard";
 
-export const blogData: BlogCardType[] = [
+export const blogData: BlogCardType[] = [ 
   {
     id: '1',
     imgUrl: 'https://dummyimage.com/600x400/000/fff&text=Investment+Strategies',
