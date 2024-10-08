@@ -47,8 +47,8 @@ const RecentBlog = () => {
             </Link>
           </div>
         </div>
-        <div className=' lg:col-span-1 col-span-1  w-full overflow-x-scroll'>
-          <div className='w-full flex lg:flex-col gap-5 px-4'>
+        <div className='lg:col-span-1 col-span-1 lg:w-full overflow-x-scroll'>
+          <div className='w-[700px] md:w-full flex lg:flex-col gap-5'>
             {
               sideBlogs.map((blog) => (
                 <BlogCard
