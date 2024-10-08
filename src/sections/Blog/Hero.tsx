@@ -3,10 +3,10 @@ import { Fade } from 'react-awesome-reveal';
 
 const Hero = () => {
   return (
-    <div className="w-full lg:h-[55vh] 2xl:h-[70vh] bg-center bg-cover bg-no-repeat bg-[url('/assets/BlogHeroImage.svg')]">
-      <div className='w-full px-3 md:px-8 lg:px-[96px] h-full flex justify-center items-center bg-black bg-opacity-40'>
+    <div className="w-full lg:h-[80vh] bg-center bg-cover bg-no-repeat bg-[url('/assets/BlogHeroImage.svg')]">
+      <div className='w-full h-full pt-48 pb-20 lg:pt-48 lg:pb-24 px-5 md:px-8 lg:px-[96px] flex items-center bg-black bg-opacity-60'>
         <Fade direction="down" triggerOnce>
-          <div className='text-white flex flex-col gap-2 pt-48 pb-20'>
+          <div className='text-white flex flex-col gap-2'>
             <h1 className='text-2xl md:text-5xl md:text-center font-bold font-ageo'>
               Your Guide to Financial Success: Ajosquad Blog
             </h1>
