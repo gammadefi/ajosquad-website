@@ -25,7 +25,7 @@ const AboutUs = () => {
         </Zoom>
 
         {/* Fade effect on text content */}
-        <Fade triggerOnce className='lg:w-1/2'>
+        <Fade direction='up' triggerOnce className='lg:w-1/2'>
           <div className='py-6 lg:py-0 lg:px-20 space-y-4 text-xl lg:text-2xl leading-relaxed'>
             <p className='font-[300]'>
               Welcome to<span className='font-semibold'> Ajosquad</span>, a financial technology company, is focused on helping people save money and achieve their financial goals. Our belief is that everyone deserves financial security, regardless of income level or financial experience. We are a team of experienced professionals passionate about helping people take control of their financial future.
