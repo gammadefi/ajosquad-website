@@ -1,35 +1,36 @@
 import React from 'react';
-import { blogData } from './blog';
 import { TbMessage2 } from 'react-icons/tb';
 import { BsDot } from 'react-icons/bs';
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 import BlogCard from './BlogCard';
+import dateFormatter from '../../libs/dataFormatter';
+import { BlogType } from '../../libs/types';
 
-const RecentBlog = () => {
-  const recentBlog = blogData[0];
-  const sideBlogs = blogData.slice(1, 3);
+const RecentBlog = ({ blogPosts }: { blogPosts: BlogType[] }) => {
+  const recentBlog = blogPosts[1];
+  const sideBlogs = blogPosts.slice(2, 4);
   return (
     <section className='px-4 md:p-10 lg:px-24 2xl:px-28 py-10 md:py-20'>
       <h3 className='text-2xl lg:text-4xl font-semibold mb-5 md:mb-10'>Recent blog post</h3>
       <div className='grid lg:grid-cols-3 grid-cols-1 w-full lg:flex-row gap-5 lg:gap-10'>
         <div className='lg:col-span-2 space-y-2 md:space-y-3'>
           <div className='relative w-full'>
-            <img src={recentBlog.imgUrl} alt={`Blog image: ${recentBlog.title}`} className='rounded-xl w-full h-[204px] md:h-[376px] object-cover' width={300} height={200} />
+            <img src={recentBlog.image} alt={`Blog image: ${recentBlog.title}`} className='rounded-xl w-full h-[204px] md:h-[376px] object-cover' width={300} height={200} />
             <div className='text-white bg-[#45B175] absolute top-4 right-4 rounded-lg px-5 py-1 lg:py-2'>
               New
             </div>
           </div>
           <div className='text-[#676767] flex items-center text-sm'>
-            <span>{recentBlog.publishDate}</span>
+            <span>{dateFormatter(recentBlog.createdAt)}</span>
             <BsDot size={20} />
-            <span>{recentBlog.readTime} read</span>
+            <span>5 min read</span>
           </div>
           <h3 className='text-[#676767] font-bold text-2xl md:text-3xl'>{recentBlog.title}</h3>
           <div className='flex gap-1 items-center text-xs font-semibold'>
             {
               recentBlog.tags.map((tag) => (
-                <span className='bg-[#F1F1F1] py-2 px-3 rounded-md'>{tag.name}</span>
+                <span className='bg-[#F1F1F1] py-2 px-3 rounded-md'>{tag}</span>
               ))
             }
           </div>
@@ -55,11 +56,11 @@ const RecentBlog = () => {
                   key={blog.id}
                   id={blog.id}
                   title={blog.title}
-                  imgUrl={blog.imgUrl}
-                  description={blog.description}
+                  image={blog.image}
+                  content={blog.content}
                   tags={blog.tags}
-                  publishDate={blog.publishDate}
-                  readTime={blog.readTime}
+                  createdAt={blog.createdAt}
+                  readTime="5 min"
                   comments={blog.comments}
                   isRecentBlogSection={true}
                 />
