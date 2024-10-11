@@ -9,7 +9,7 @@ import MissionAndVision from '../../src/sections/AboutPage/MissionAndVision'
 
 const index = () => {
   return (
-    <main>
+    <div>
       <Header hasHero={true} />
       <Hero />
       <AboutUs />
@@ -17,7 +17,7 @@ const index = () => {
       <MissionAndVision />
       <Team />
       <Footer />
-    </main>
+    </div>
   )
 }
 
