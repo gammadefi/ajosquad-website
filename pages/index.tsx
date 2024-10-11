@@ -15,7 +15,7 @@ import Explore from '../src/sections/Hompage/Explore'
 
 const index = () => {
   return (
-    <div>
+    <div className=' w-screen overflow-x-hidden'>
       <Head>
         <title>Home | AjoSquads</title>
         <meta property="og:description" content="Empowering Your Financial Journey" key="title" />

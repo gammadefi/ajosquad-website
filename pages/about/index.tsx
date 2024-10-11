@@ -9,7 +9,7 @@ import MissionAndVision from '../../src/sections/AboutPage/MissionAndVision'
 
 const index = () => {
   return (
-    <div>
+    <div className=' w-screen overflow-x-hidden'>
       <Header hasHero={true} />
       <Hero />
       <AboutUs />
