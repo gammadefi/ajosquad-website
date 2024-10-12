@@ -37,8 +37,8 @@ const Team = () => {
           </Slide>
           <Slide direction="up" triggerOnce className='w-full md:w-auto'>
             <TeamCard
-              name='Ify Mosindi Ibenye'
-              description='Ify Mosindi Ibenye has spent the last 14 years working in the Tech Industry as a Certified Software Consultant. Her consulting experience has taken her across Canada, United States and Nigeria where she provided expert solution designs, software implementation and support for organizations in various industries like the Government of Canada,
+              name='Ify Ibenye'
+              description='Ify Ibenye has spent the last 14 years working in the Tech Industry as a Certified Software Consultant. Her consulting experience has taken her across Canada, United States and Nigeria where she provided expert solution designs, software implementation and support for organizations in various industries like the Government of Canada,
               Construction & Mining, Retail, Aviation and other high valued private sector companies.
               She has a bachelor&apos;s degree from Delta State University Nigeria, a Post Graduate Certificate in HR Management from Humber college, Toronto Canada and an MBA from the University of Nebraska Omaha in the US. She also has an ERP Software Certification from SAP Germany.
               In her spare time, she loves to spend time with her family and mentors women in the tech industry.'
