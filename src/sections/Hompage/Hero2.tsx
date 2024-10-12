@@ -8,7 +8,7 @@ const Hero = () => {
         <div className='relative box'>
             <div className='box'>
                 <video className='w-full h-[80vh] md:h-[100vh] lg:h-[100vh]' loop autoPlay muted id="bg-video">
-                    <source src="https://res.cloudinary.com/dldwasfdl/video/upload/v1728714843/5402988_Coll_wavebreak_Human_Representation_1280x720_eljn6d.mp4" />
+                    <source src="https://res.cloudinary.com/dldwasfdl/video/upload/v1728763118/2476159_Saving_Money_3840x2160_qq1jwx.mp4" />
                 </video>
                 <div className='w-full px-3  md:px-8 lg:px-[96px] h-[80vh] md:h-[100vh] lg:h-[100vh] flex justify-center items-center bg-black bg-opacity-30'>
                     <Fade direction="down" triggerOnce>
