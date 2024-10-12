@@ -62,6 +62,7 @@
 * {
     font-family: 'Outfit', sans-serif;
     scroll-behavior: smooth;
+    margin-bottom: 0;
 }
 
 .custom-scrollbar {
@@ -92,3 +93,4 @@
     left: 0;
     z-index: -1;
   }
+

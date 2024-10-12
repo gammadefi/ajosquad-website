@@ -71,7 +71,7 @@ const Footer = () => {
       <div className='w-full py-16 flex items-center gap-5 flex-wrap-reverse justify-between'>
         <div className='flex gap-2 items-center'>
           <Image src={'/assets/logo.svg'} alt='' width={40} height={40} />
-          <h5>Ajosquad | Ajosquad by Peony Finances  All Rights Reserved | Copyright © 2024</h5>
+          <h5>Ajosquad | All Rights Reserved | Copyright © 2024</h5>
         </div>
 
         <div className='flex gap-2 items-center ml-auto justify-end'>
