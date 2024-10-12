@@ -9,7 +9,7 @@ const FinancialsEducation = () => {
       <Zoom triggerOnce>
         <div className='text-[#08354C] space-y-3 mb-6 lg:mb-14'>
           <h2 className='text-3xl lg:text-5xl font-bold text-center'>
-            We Offer Financial Education
+            We Also Offer Financial Education
           </h2>
           <p className='text-sm md:text-base lg:text-2xl text-center'>
             Unlock Your Financial Future: Learn from Industry Experts with Our Monthly Classes!
