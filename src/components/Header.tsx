@@ -30,7 +30,7 @@ export default function Header({ hasHero }: { hasHero?: boolean }) {
       <div
         className={clsx(
           "w-full md:border-b-[0.5px] h-[10vh] text-nowrap px-3 md:px-8 lg:px-[96px] flex items-center justify-between py-2 sm:mx-0",
-          hasHero ? "bg-opacity-10 !text-white absolute" : "bg-white bg-opacity-80"
+          hasHero ? "bg-opacity-10 !text-white absolute z-10" : "bg-white bg-opacity-80"
         )}
       >
         <div className="py-3  flex md:gap-12 items-center md:justify-between">
