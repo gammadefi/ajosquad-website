@@ -7,7 +7,7 @@ const Hero = () => {
     return (
         <div className='relative box'>
             <div className='box'>
-                <video className='w-full h-[90vh] md:h-[100vh] lg:h-[100vh]' loop autoPlay muted id="bg-video">
+                <video className='w-full h-[90vh] md:h-[100vh] lg:h-[100vh]' playsInline loop autoPlay muted id="bg-video">
                     <source src="https://res.cloudinary.com/dldwasfdl/video/upload/v1728763118/2476159_Saving_Money_3840x2160_qq1jwx.mp4" />
                 </video>
                 <div className='w-full px-3  md:px-8 lg:px-[96px] h-[90vh] md:h-[100vh] lg:h-[100vh] flex justify-center items-center bg-black bg-opacity-30'>
