@@ -13,7 +13,7 @@ const WhatsAppButton = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-5 z-20 left-5  text-white  p-4 transition-all"
+      className="fixed bottom-5 z-20 left-2 md:left-5  text-white  md:p-4 transition-all"
     >
       <Image src={"/assets/whatsapp-chat.svg"} alt='' width={200} height={72} />
     </a>
