@@ -74,11 +74,11 @@ const Benefits = () => {
 
                         <div className='flex gap-4 my-3 flex-col'>
                             {[
-                                "Transparent Property Details",
-                                "Professional Management",
-                                "Regular Updates",
-                                "Planned Sale Window",
-                                "Property Location"
+                                "Full Transparency and Personal Involvement",
+                                "Expert Property Management and Maintenance",
+                                "Stable Canadian Real Estate Market",
+                                "Strategic 3-5 Year Investment Horizon",
+                                "Detailed Quarterly Performance Reports"
                             ].map((benefit, index) => (
                                 <Fade direction="up" triggerOnce delay={800 + index * 200} key={index}>
                                     <div className='flex md:text-lg gap-2 items-center'>

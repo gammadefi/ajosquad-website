@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Header from '../src/components/Header'
-import Hero from '../src/sections/Hompage/Hero'
+import Hero from '../src/sections/Hompage/Hero2'
 import Footer from '../src/components/Footer'
 import Shortstory from '../src/sections/Hompage/Shortstory'
 import Products from '../src/sections/Hompage/Products'
@@ -15,7 +15,7 @@ import Explore from '../src/sections/Hompage/Explore'
 
 const index = () => {
   return (
-    <div>
+    <div className=' w-screen overflow-x-hidden'>
       <Head>
         <title>Home | AjoSquads</title>
         <meta property="og:description" content="Empowering Your Financial Journey" key="title" />

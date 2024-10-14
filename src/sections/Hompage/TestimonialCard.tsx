@@ -11,7 +11,7 @@ const TestimonialCard = ({ name, image, testimonial }: { name: string, image: st
   };
 
   return (
-    <div className={`p-3 lg:px-8 lg:py-7 h-[280px] lg:h-[400px] bg-[#101010] rounded-xl flex flex-col justify-between  transition-all duration-300 ease-in-out ${isExpanded ? 'lg:w-[750px] w-[500px]' : 'w-[300px] lg:w-[437px]'}`}>
+    <div className={`p-3 lg:px-8 lg:py-7 h-[320px] lg:h-[400px] bg-[#101010] rounded-xl flex flex-col justify-between  transition-all duration-300 ease-in-out ${isExpanded ? 'lg:w-[750px] w-[500px]' : 'w-[300px] lg:w-[437px]'}`}>
       {/* Testimonial Text */}
       <p className='text-sm lg:text-lg'>
         {isExpanded ? testimonial : `${testimonial.substring(0, 300)}...`}

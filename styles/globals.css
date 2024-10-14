@@ -62,4 +62,35 @@
 * {
     font-family: 'Outfit', sans-serif;
     scroll-behavior: smooth;
+    margin-bottom: 0;
 }
+
+.custom-scrollbar {
+    --scrollbar-bg: #888; /* Default color */
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-bg) transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-bg);
+    border-radius: 10px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+
+   .box{
+      position:relative;
+  }
+
+
+  #bg-video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+

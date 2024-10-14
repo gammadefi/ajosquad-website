@@ -3,9 +3,44 @@ import Link from 'next/link'
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import React from "react";
+import React, { useState } from "react";
+import axios from 'axios';
+import Spinner from './spinner/Spinner';
 
 const Footer = () => {
+
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('');
+
+  const handleSubmit = async () => {
+    // e.preventDefault();
+    setStatus('loading');
+
+    try {
+      const response = await axios.post('/api/subscribe', { email });
+
+      if (response.data.success) {
+        setStatus('success');
+        setEmail('');
+
+        setTimeout(() => {
+          setStatus('');
+        }, 5000);
+      } else {
+        setStatus('error');
+
+        setTimeout(() => {
+          setStatus('');
+        }, 5000);
+      }
+    } catch (error) {
+      setStatus('error');
+
+       setTimeout(() => {
+        setStatus('');
+      }, 5000);
+    }
+  };
   return (
     <footer className="w-full font-sora bg-black text-white pt-16 px-8 md:px-16">
       <div className='w-full gap-10 flex md:flex-row flex-col justify-between '>
@@ -14,8 +49,8 @@ const Footer = () => {
           <p className='text-xs md:text-sm font-normal mb-6 my-4'>Stay ahead of the curve with exclusive updates and unbeatable financial offers from Ajosquad. Subscribe now to be the first to discover the latest news from Ajosquad.</p>
 
           <div className='w-full py-3 px-4 flex items-center border boder-white rounded-full md:h-[56px]'>
-            <input className='w-full h-full text-white placeholder:text-white bg-transparent border-none focus:outline-none' placeholder='Your Email' />
-            <button className='text-primary bg-white rounded-full w-[64px] py-[6px] px-3 text-sm '>Join</button>
+            <input value={email} onChange={(e) => setEmail(e.target.value)} className='w-full h-full text-white placeholder:text-white bg-transparent border-none focus:outline-none' placeholder='Your Email' />
+            <button disabled={status === "loading" || status === "success"} onClick={handleSubmit} className='text-primary bg-white flex items-center justify-center rounded-full w-[64px] py-[6px] px-3 text-sm '>{status === "loading" ? <Spinner width={14} color='#000' /> : status === "success" ? "✔" :"Join"}</button>
 
           </div>
         </div>
@@ -36,7 +71,7 @@ const Footer = () => {
       <div className='w-full py-16 flex items-center gap-5 flex-wrap-reverse justify-between'>
         <div className='flex gap-2 items-center'>
           <Image src={'/assets/logo.svg'} alt='' width={40} height={40} />
-          <h5>Ajosquad | Ajosquad by Peony Finances  All Rights Reserved | Copyright © 2024</h5>
+          <h5>Ajosquad | All Rights Reserved | Copyright © 2024</h5>
         </div>
 
         <div className='flex gap-2 items-center ml-auto justify-end'>
