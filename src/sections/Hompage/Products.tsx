@@ -36,7 +36,7 @@ const Products = () => {
                         </Fade>
 
                         <Fade triggerOnce delay={1000}>
-                            <Link href="http://localhost:3000/products/ajosquad" className='flex items-center w-[160px] justify-center border border-primary my-4 rounded px-4 py-3 gap-2 gradient-text'>
+                            <Link href="/products/ajosquad" className='flex items-center w-[160px] justify-center border border-primary my-4 rounded px-4 py-3 gap-2 gradient-text'>
                                 Read More <FaArrowRight className='text-primary font-thin' />
                             </Link>
                         </Fade>
@@ -69,7 +69,7 @@ const Products = () => {
                         </Fade>
 
                         <Fade triggerOnce delay={1200}>
-                            <Link href="http://localhost:3000/products/ajohomes" className='flex items-center w-[160px] justify-center border border-primary my-4 rounded px-4 py-3 gap-2 gradient-text'>
+                            <Link href="/products/ajohomes" className='flex items-center w-[160px] justify-center border border-primary my-4 rounded px-4 py-3 gap-2 gradient-text'>
                                 Read More <FaArrowRight className='text-primary font-thin' />
                             </Link>
                         </Fade>
