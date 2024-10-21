@@ -9,14 +9,15 @@ export type BlogType = {
 }
 
 export type CommentType = {
-  username: string,
+  id: string,
   content: string,
+  user_id: string,
+  blog_id: string,
   createdAt: string,
 };
 
 
 export type BlogCardType = BlogType & {
-  readTime: string,
   isRecentBlogSection?: boolean,
   comments: CommentType[]
 }

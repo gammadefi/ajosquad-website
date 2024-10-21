@@ -5,10 +5,11 @@ import { TbMessage2 } from "react-icons/tb";
 import { FaArrowRight } from "react-icons/fa";
 import Link from 'next/link';
 import { BlogCardType } from '../../libs/types';
-import dateFormatter from '../../libs/dataFormatter';
+import dateFormatter from '../../libs/utils/dateFormatter';
+import { calculateReadTime } from '../../libs/utils/calculateReadTime';
 
 
-const BlogCard = ({ id, title, image, content, createdAt, readTime, tags, comments, isRecentBlogSection }: BlogCardType) => {
+const BlogCard = ({ id, title, image, content, createdAt, tags, comments, isRecentBlogSection }: BlogCardType) => {
   return (
     <div className='w-full md:max-w-[400px] space-y-1.5'>
       {/* TODO: update img tag to Next.js Image component  */}
@@ -17,7 +18,7 @@ const BlogCard = ({ id, title, image, content, createdAt, readTime, tags, commen
         <div className='flex items-center -space-x-1'>
           <span>{dateFormatter(createdAt)}</span>
           <BsDot size={20} />
-          <span>{readTime} read</span>
+          <span>{calculateReadTime(content)} min(s) read</span>
         </div>
         <div className='text-base flex gap-1 items-center text-black'>
           <TbMessage2 size={25} />
@@ -37,7 +38,7 @@ const BlogCard = ({ id, title, image, content, createdAt, readTime, tags, commen
             ))
           }
         </div>
-        <Link href={`/blog/${id}`} className='flex px-3 py-1.5 gap-1 items-center text-black rounded border border-primary'>
+        <Link href={`/blog/${id}?tag=${tags[0]}`} className='flex px-3 py-1.5 gap-1 items-center text-black rounded border border-primary'>
           <span>Read More</span>
           <FaArrowRight />
         </Link>

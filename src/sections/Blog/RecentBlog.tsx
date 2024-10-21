@@ -4,14 +4,19 @@ import { BsDot } from 'react-icons/bs';
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 import BlogCard from './BlogCard';
-import dateFormatter from '../../libs/dataFormatter';
+import dateFormatter from '../../libs/utils/dateFormatter';
 import { BlogType } from '../../libs/types';
+import { calculateReadTime } from '../../libs/utils/calculateReadTime';
 
 const RecentBlog = ({ blogPosts }: { blogPosts: BlogType[] }) => {
+  // TODO: Update when admin deletes first sample data from db
+  // const recentBlog = blogPosts[0];
+  // const sideBlogs = blogPosts.slice(1, 3);
+
   const recentBlog = blogPosts[1];
   const sideBlogs = blogPosts.slice(2, 4);
   return (
-    <section className='px-4 md:p-10 lg:px-24 2xl:px-28 py-10 md:py-20'>
+    <section className='py-10 md:py-20'>
       <h3 className='text-2xl lg:text-4xl font-semibold mb-5 md:mb-10'>Recent blog post</h3>
       <div className='grid lg:grid-cols-3 grid-cols-1 w-full lg:flex-row gap-5 lg:gap-10'>
         <div className='lg:col-span-2 space-y-2 md:space-y-3'>
@@ -24,7 +29,7 @@ const RecentBlog = ({ blogPosts }: { blogPosts: BlogType[] }) => {
           <div className='text-[#676767] flex items-center text-sm'>
             <span>{dateFormatter(recentBlog.createdAt)}</span>
             <BsDot size={20} />
-            <span>5 min read</span>
+            <span>{calculateReadTime(recentBlog.content)} min(s) read</span>
           </div>
           <h3 className='text-[#676767] font-bold text-2xl md:text-3xl'>{recentBlog.title}</h3>
           <div className='flex gap-1 items-center text-xs font-semibold'>
@@ -42,7 +47,7 @@ const RecentBlog = ({ blogPosts }: { blogPosts: BlogType[] }) => {
               <TbMessage2 size={25} />
               <span>{recentBlog.comments.length} Comments</span>
             </div>
-            <Link href={`/blog/${recentBlog.id}`} className='flex px-3 py-1.5 gap-1 items-center text-black rounded border border-primary'>
+            <Link href={`/blog/${recentBlog.id}?tag=${recentBlog.tags[0]}`} className='flex px-3 py-1.5 gap-1 items-center text-black rounded border border-primary'>
               <span>Read More</span>
               <FaArrowRight />
             </Link>
@@ -60,7 +65,6 @@ const RecentBlog = ({ blogPosts }: { blogPosts: BlogType[] }) => {
                   content={blog.content}
                   tags={blog.tags}
                   createdAt={blog.createdAt}
-                  readTime="5 min"
                   comments={blog.comments}
                   isRecentBlogSection={true}
                 />
