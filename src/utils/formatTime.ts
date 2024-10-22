@@ -42,3 +42,9 @@ export const formatDate2 = (dateString: string): string => {
   return `${year}-${month}-${day}`;
 };
 
+export const formatCurrentDate = () => {
+  const today = new Date();
+  const options: Intl.DateTimeFormatOptions = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+  return today.toLocaleDateString(undefined, options);
+};
+

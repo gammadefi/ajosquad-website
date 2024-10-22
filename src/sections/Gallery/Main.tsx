@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
 import GalleryComponent from './GalleryComponent';
+import Pagination from '../../components/Pagination';
 
 interface TabProps {
     tabs: string[];
@@ -15,6 +16,7 @@ const Main = () => {
 
     const [galleryItems, setGalleryItems] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
+    const [totalPages, setTotalPages] = useState(1)
 
     const filterFromQuery: any = query.filterBy || 'All';
     const pageFromQuery = query.page ? parseInt(query.page as string, 10) : 1;
@@ -32,6 +34,7 @@ const Main = () => {
                     `https://ajosquad-backend.onrender.com/gallery?page=${page}&limit=9&tags=${filterBy}`
                 );
                 setGalleryItems(response.data.data); // Set gallery items from API response
+                setTotalPages(response.data.totalPages)
             } catch (error) {
                 console.error('Error fetching gallery items:', error);
                 setGalleryItems([]); // Clear items on error
@@ -81,7 +84,7 @@ const Main = () => {
                         <div className='flex col-span-3 justify-center items-center gap-5 max-w-[600px] flex-col w-full mx-auto '>
                             <img src='/assets/no-gallery.svg' className='mx-auto md:w-[264px] w-[150px] h-auto' />
 
-                            <h3 className='tex-center capitalize font-semibold md:text-3xl text-xl'>{filterFromQuery === "All" ? "No video Yet" :`no video found for "${filterFromQuery}"`}</h3>
+                            <h3 className='tex-center capitalize font-semibold md:text-3xl text-xl'>{filterFromQuery === "All" ? "No video Yet" : `no video found for "${filterFromQuery}"`}</h3>
                             <p className='font-light text-center'>Our video gallery is currently empty. Explore our blog for more information and stay tuned for upcoming video content.</p>
 
                         </div>
@@ -89,18 +92,10 @@ const Main = () => {
             </div>
 
             {/* Pagination Logic */}
-            {/* <div className='flex justify-center mt-8'>
-               
-                {[...Array(5)].map((_, idx) => (
-                    <button
-                        key={idx}
-                        className={`px-3 py-1 mx-1 ${pageFromQuery === idx + 1 ? 'bg-blue-500 text-white' : 'bg-gray-300'}`}
-                        onClick={() => handlePageChange(idx + 1)}
-                    >
-                        {idx + 1}
-                    </button>
-                ))}
-            </div> */}
+            {(!isLoading && galleryItems.length > 0)  && <div className='flex justify-end mt-8'>
+
+                <Pagination totalPages={totalPages} />
+            </div>}
         </div>
     );
 };
