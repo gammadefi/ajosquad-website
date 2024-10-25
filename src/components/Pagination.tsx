@@ -9,7 +9,6 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
   const pathname = usePathname();
   const router = useRouter();
   const { query } = router;
-  console.log(query)
   const currentPage: any = query.page || '1';
   const currentTag = query.tag
 
@@ -57,7 +56,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
 
 function PaginationNumber({ page, href, isActive }: { page: number | string, href: string, isActive: boolean }) {
   return (
-    <Link href={href} className={`flex h-10 w-10 rounded-md items-center justify-center text-sm ${isActive && 'bg-primary text-white'}`}>
+    <Link href={href} scroll={false} className={`flex p-2 w-8 rounded-md items-center justify-center text-sm ${isActive && 'bg-primary text-white'}`}>
       {page}
     </Link>
   );
@@ -78,9 +77,9 @@ function PaginationArrow({ href, direction, isDisabled }: { href: string, direct
     );
 
   return isDisabled ? (
-    <div className="flex px-5 gap-1 items-center justify-center rounded-md border pointer-events-none text-gray-400">{jsx}</div>
+    <div className="text-sm flex px-3 gap-1 items-center justify-center rounded-md border pointer-events-none text-gray-400">{jsx}</div>
   ) : (
-    <Link className="flex px-5 gap-1 items-center justify-center rounded-md border border-primary" href={href}>
+    <Link href={href} scroll={false} className="text-sm flex px-3 gap-1 items-center justify-center rounded-md border border-primary">
       {jsx}
     </Link>
   );

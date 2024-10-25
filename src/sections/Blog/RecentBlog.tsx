@@ -6,22 +6,21 @@ import { FaArrowRight } from 'react-icons/fa';
 import BlogCard from './BlogCard';
 import dateFormatter from '../../libs/utils/dateFormatter';
 import { BlogType } from '../../libs/types';
-import { calculateReadTime } from '../../libs/utils/calculateReadTime';
+import { calculateReadTime } from '../../libs/utils/blogFunctions';
+import MarkdownRenderer from './MarkdownRenderer';
+import Image from 'next/image';
 
 const RecentBlog = ({ blogPosts }: { blogPosts: BlogType[] }) => {
-  // TODO: Update when admin deletes first sample data from db
-  // const recentBlog = blogPosts[0];
-  // const sideBlogs = blogPosts.slice(1, 3);
+  const recentBlog = blogPosts[0];
+  const sideBlogs = blogPosts.slice(1, 3);
 
-  const recentBlog = blogPosts[1];
-  const sideBlogs = blogPosts.slice(2, 4);
   return (
     <section className='py-10 md:py-20'>
       <h3 className='text-2xl lg:text-4xl font-semibold mb-5 md:mb-10'>Recent blog post</h3>
       <div className='grid lg:grid-cols-3 grid-cols-1 w-full lg:flex-row gap-5 lg:gap-10'>
         <div className='lg:col-span-2 space-y-2 md:space-y-3'>
           <div className='relative w-full'>
-            <img src={recentBlog.image} alt={`Blog image: ${recentBlog.title}`} className='rounded-xl w-full h-[204px] md:h-[376px] object-cover' width={300} height={200} />
+            <Image src={recentBlog.image} alt={`Blog image: ${recentBlog.title}`} className='rounded-xl w-full h-[204px] md:h-[376px] object-cover' width={300} height={200} />
             <div className='text-white bg-[#45B175] absolute top-4 right-4 rounded-lg px-5 py-1 lg:py-2'>
               New
             </div>
@@ -39,9 +38,9 @@ const RecentBlog = ({ blogPosts }: { blogPosts: BlogType[] }) => {
               ))
             }
           </div>
-          <p className='text-sm md:text-base text-[#3E3D34]'>
-            Lorem ipsum dolor sit amet consectetur. Tortor euismod eu aliquam odio congue pellentesque eget. Amet proin vitae massa accumsan et commodo sed. Elementum dui ipsum urna tortor enim. Sollicitudin at egestas viverra a mauris id scelerisque purus cras. Maecenas in massa in purus dui orci. Lorem ipsum dolor sit amet consectetur. Tortor euismod eu aliquam odio congue pellentesque eget. Amet proin vitae massa accumsan et commodo sed. Elementum dui ipsum urna tortor enim. Sollicitudin at egestas viverra a mauris id scelerisque purus cras. Maecenas in massa in purus dui orci.Lorem ipsum dolor sit amet consectetur. Tortor euismod eu aliquam odio congue pellentesque eget. Amet proin vitae massa accumsan et commodo sed. Elementum dui ipsum urna tortor enim. Sollicitudin at egestas viverra a mauris id scelerisque purus cras. Maecenas in massa in purus dui orci.Lorem ipsum dolor sit amet consectetur. Tortor euismod eu aliquam odio congue pellentesque eget. Amet proin vitae massa accumsan et commodo sed. Elementum dui ipsum urna tortor enim. Sollicitudin at egestas viverra a mauris id scelerisque purus cras. Maecenas in massa in purus dui orci.
-          </p>
+          <article className='text-sm md:text-base text-[#3E3D34] prose-p:my-2 prose-a:text-primary prose-a:underline'>
+            <MarkdownRenderer markdown={recentBlog.content} />
+          </article>
           <div className='text-sm flex justify-between'>
             <div className='text-base flex gap-1 items-center text-black font-medium'>
               <TbMessage2 size={25} />
