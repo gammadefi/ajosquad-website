@@ -1,6 +1,5 @@
 import React from 'react';
 import { Fade, Slide } from 'react-awesome-reveal';
-import { formatCurrentDate } from '../../utils/formatTime';
 
 const PrivacyPolicies = () => {
   return (
@@ -14,7 +13,7 @@ const PrivacyPolicies = () => {
         {/* Fade effect for the introduction paragraph */}
         <Fade triggerOnce>
           <p className='lg:text-lg'>
-            This Privacy Policy takes effect from {formatCurrentDate()} (hereinafter referred to as the effective date).
+            This Privacy Policy takes effect from Friday, 27th September, 2024 (hereinafter referred to as the effective date).
             In this Privacy Policy, references to 'Our', 'Ourselves', 'We' or 'Us', our Terms and Conditions (T&Cs), this Privacy Policy, and any or all other Agreements, are to Ajosquad and the services offered on our website and mobile application.
             We, at Ajosquad, are committed to protecting your privacy and the data you submit to us in order to access our services.
           </p>

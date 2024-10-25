@@ -1,26 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import Header from '../../src/components/Header';
-import Footer from '../../src/components/Footer';
-import Hero from '../../src/sections/Gallery/Hero';
-import Main from '../../src/sections/Gallery/Main';
-import axios from 'axios';
-import { useRouter } from 'next/router';
+import React from 'react'
+import Header from '../../src/components/Header'
+import Footer from '../../src/components/Footer'
+import ComingSoon from '../../src/sections/Gallery/ComingSoon'
 
-
-
-const GalleryPage: React.FC = () => {
-  
-
+const index = () => {
   return (
     <div>
-      <Header hasHero={true} />
-      <Hero />
-      <Main />
-
-
-      <Footer />
+        <Header hasHero={false} />
+            <ComingSoon />
+        <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default GalleryPage;
+export default index

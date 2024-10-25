@@ -58,7 +58,7 @@ const TawkToIntegration = () => {
   useEffect(() => {
     const tawkWidget = document.querySelector("#tawkScript"); // Access Tawk.to element
 
-    // console.log(tawkWidget)
+    console.log(tawkWidget)
     // Apply visibility styles based on scrolling
     if (tawkWidget) {
       tawkWidget.className = isVisible ? 'opacity-100' : 'opacity-0'
