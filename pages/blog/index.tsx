@@ -8,11 +8,13 @@ import { BlogType } from '../../src/libs/types'
 import { GetServerSideProps } from 'next'
 import Pagination from '../../src/components/Pagination'
 import Head from 'next/head'
+import axios from 'axios'
 
-const index = ({ data1, data2 }: { data1: { data: BlogType[] }, data2: { totalPages: number, data: BlogType[] } }) => {
-  const blogPosts1: BlogType[] = data1.data;
-  const blogPosts: BlogType[] = data2.data;
-  const totalPages = data2.totalPages
+const index = ({ recentBlogPosts, allBlogPosts }: { recentBlogPosts: { data: BlogType[] }, allBlogPosts: { totalPages: number, data: BlogType[] } }) => {
+  const blogPosts1: BlogType[] = recentBlogPosts.data;
+  const blogPosts: BlogType[] = allBlogPosts.data;
+  const totalPages = allBlogPosts.totalPages;
+
   return (
     <div>
       <Head>
@@ -20,11 +22,18 @@ const index = ({ data1, data2 }: { data1: { data: BlogType[] }, data2: { totalPa
       </Head>
       <Header hasHero={true} />
       <Hero />
-      <div className='px-4 md:px-10 lg:px-24 2xl:px-28'>
-        <RecentBlog blogPosts={blogPosts1} />
-        <AllBlogs blogPosts={blogPosts} />
-        <Pagination totalPages={totalPages} />
-      </div>
+      {
+        blogPosts1.length > 1 ?
+          <div className='px-4 md:px-10 lg:px-24 2xl:px-28'>
+            <RecentBlog blogPosts={blogPosts1} />
+            <AllBlogs blogPosts={blogPosts} />
+            <Pagination totalPages={totalPages} />
+          </div> :
+          <div className='py-10 md:py-16 lg:py-24 flex col-span-3 justify-center items-center gap-5 max-w-[600px] flex-col w-full mx-auto '>
+            <img src='/assets/no-gallery.svg' className='mx-auto md:w-[264px] w-[150px] h-auto' />
+            <p className='font-light text-center'>We currently have no blog posts. Explore our gallery for more information and stay tuned for upcoming blog content.</p>
+          </div>
+      }
       <Footer />
     </div>
   )
@@ -33,22 +42,33 @@ const index = ({ data1, data2 }: { data1: { data: BlogType[] }, data2: { totalPa
 export default index
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { query } = context;
+  const { query }: any = context;
+
   let url = 'https://ajosquad-backend.onrender.com/blog?limit=6';
   if (query.page) {
     url = `https://ajosquad-backend.onrender.com/blog?limit=6&page=${query.page}`;
   }
   const responses = await Promise.all([
-    fetch("https://ajosquad-backend.onrender.com/blog"),
-    fetch(url)
+    axios.get("https://ajosquad-backend.onrender.com/blog"),
+    axios.get(url)
   ]);
-  const data1 = await responses[0].json();
-  const data2 = await responses[1].json();
+
+  const recentBlogPosts = responses[0].data;
+  const allBlogPosts = responses[1].data;
+
+  if (allBlogPosts.totalPages < query.page) {
+    return {
+      redirect: {
+        destination: '/blog',
+        permanent: false
+      },
+    };
+  }
 
   return {
     props: {
-      data1,
-      data2
+      recentBlogPosts,
+      allBlogPosts
     },
   }
 }
