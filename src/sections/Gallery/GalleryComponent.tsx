@@ -5,7 +5,7 @@ import Link from 'next/link';
 const GalleryComponent = ({ galleryItem }: { galleryItem: any }) => {
     // Helper function to check if the URL is a video
     const isVideo = (url: string) => {
-        return url.match(/\.(mp4|webm|ogg)$/i);
+        return url.match(/\.(mp4|webm|ogg|mov)$/i);
     };
 
     return (
@@ -20,7 +20,7 @@ const GalleryComponent = ({ galleryItem }: { galleryItem: any }) => {
                                 poster={galleryItem.thumbnail_url} // Optional placeholder for video preview
                                 controls={false} // No controls to make it appear static
                             >
-                                <source src={galleryItem.url} type="video/mp4" />
+                                <source src={galleryItem.url} />
                                 {/* You can add fallback formats if needed */}
                             </video>
                         ) : (

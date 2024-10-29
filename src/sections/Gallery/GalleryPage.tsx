@@ -16,7 +16,7 @@ const GalleryPage = () => {
     const { id }: any = router.query;
 
     const isVideo = (url: string) => {
-        return url.match(/\.(mp4|webm|ogg)$/i);
+        return url.match(/\.(mp4|webm|ogg|mov)$/i);
     };
 
     // Fetch single gallery item
@@ -78,11 +78,11 @@ const GalleryPage = () => {
 
                         </div>
                         {!isEmpty(data) && (
-                            <div className='w-full h-full max-w-[800px]'>
-                                <div className='w-full bg-[#F1F1F1] rounded h-auto '>
+                            <div className='w-full  aspect-video max-w-[800px]'>
+                                <div className='w-full bg-[#F1F1F1] rounded h-full '>
                                     {isVideo(data.url) ? (
                                         <video
-                                            className="w-full rounded object-cover h-full"
+                                            className="w-full  rounded object-contain h-full"
                                             poster={data.thumbnail_url}
                                             controls={true}
                                             onError={(e) => {
