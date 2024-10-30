@@ -15,6 +15,8 @@ export const trimObject = (obj: any) => {
   return obj;
 };
 
+
+
 export const _extractInitials = (val: string) => {
   const _first = val.split(" ")[0].slice(0, 1);
   const _second = val?.split(" ")[1]?.slice(0, 1);
