@@ -12,11 +12,24 @@ declare global {
   interface Window {
     fbq: (...args: any[]) => void;
     _fbq?: typeof window.fbq;
+    dataLayer: any[];
   }
 }
 
 
 function MyApp({ Component, pageProps }: AppProps) {
+
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'production') {
+      // Initialize dataLayer for GTM
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'gtm.js',
+        'gtm.start': new Date().getTime(),
+      });
+    }
+  }, []);
+
   useEffect(() => {
     // Initialize fbq after loading the script
     if (process.env.NODE_ENV === 'production' && typeof window.fbq !== 'undefined') {
@@ -26,21 +39,15 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
   return (
     <>
-      <Head>
-        {/* Facebook Pixel - Noscript Fallback */}
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            src={`https://www.facebook.com/tr?id=3848526125376124&ev=PageView&noscript=1`}
-          />
-        </noscript>
-      </Head>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=G-85Q5QFYMRK`}
-        strategy="afterInteractive"
-      />
+      <Script id="gtm-script" strategy="afterInteractive">
+        {`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-MNVT2BBB ');
+      `}
+      </Script>
       <Script id="google-analytics" strategy="afterInteractive">
         {`
                     window.dataLayer = window.dataLayer || [];

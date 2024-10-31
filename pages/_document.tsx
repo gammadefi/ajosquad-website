@@ -7,15 +7,7 @@ class MyDocument extends Document {
             <Html lang="en">
                 <Head>
                     {/* Google Tag Manager Script */}
-                    <Script id="gtm-script" strategy="afterInteractive">
-                        {`
-                            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                            })(window,document,'script','dataLayer','GTM-MNVT2BBB ');
-                        `}
-                    </Script>
+                  
                 </Head>
                 <body>
                     {/* Google Tag Manager NoScript */}
@@ -26,6 +18,15 @@ class MyDocument extends Document {
                             width="0"
                             style={{ display: 'none', visibility: 'hidden' }}
                         ></iframe>
+                    </noscript>
+                    {/* Facebook Pixel - Noscript Fallback */}
+                    <noscript>
+                        <img
+                            height="1"
+                            width="1"
+                            style={{ display: 'none' }}
+                            src={`https://www.facebook.com/tr?id=3848526125376124&ev=PageView&noscript=1`}
+                        />
                     </noscript>
 
                     <Main />
