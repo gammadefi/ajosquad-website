@@ -27,16 +27,15 @@ function MyApp({ Component, pageProps }: AppProps) {
         event: 'gtm.js',
         'gtm.start': new Date().getTime(),
       });
+
+      // Initialize Meta Pixel
+      if (typeof window.fbq !== 'undefined') {
+        window.fbq('init', '1061611859018286'); // Your new pixel ID
+        window.fbq('track', 'PageView');
+      }
     }
   }, []);
 
-  useEffect(() => {
-    // Initialize fbq after loading the script
-    if (process.env.NODE_ENV === 'production' && typeof window.fbq !== 'undefined') {
-      window.fbq('init', '3848526125376124'); // Replace 'YOUR_PIXEL_ID' with your actual Pixel ID
-      window.fbq('track', 'PageView');
-    }
-  }, []);
   return (
     <>
       <Script id="gtm-script" strategy="afterInteractive">
@@ -45,41 +44,27 @@ function MyApp({ Component, pageProps }: AppProps) {
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-MNVT2BBB ');
-      `}
+          })(window,document,'script','dataLayer','GTM-MNVT2BBB');
+        `}
       </Script>
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-85Q5QFYMRK');
-                `}
-      </Script>
+      {/* Remove duplicate Google Analytics script since it will be managed through GTM */}
       <Script
         id="fb-pixel"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-                        !(function(f, b, e, v, n, t, s) {
-                            if (f.fbq) return;
-                            n = f.fbq = function() {
-                                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-                            };
-                            if (!f._fbq) f._fbq = n;
-                            n.push = n;
-                            n.loaded = !0;
-                            n.version = '2.0';
-                            n.queue = [];
-                            t = b.createElement(e);
-                            t.async = !0;
-                            t.src = v;
-                            s = b.getElementsByTagName(e)[0];
-                            s.parentNode.insertBefore(t, s);
-                        })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-                    `,
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+          `,
         }}
       />
+
       <TawkToIntegration />
       <Toaster />
       <WhatsAppButton />
