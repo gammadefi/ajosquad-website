@@ -13,10 +13,10 @@ const Explore = () => {
       <h3 className='text-3xl md:text-5xl font-light text-center md:px-10'>Click to <span className="gradient-text font-medium">join & explore</span><br className='md:hidden' /> out our latest post <br /> on our <span className="gradient-text font-normal">social</span> media <span className="gradient-text font-normal">channels</span></h3>
       <div className='-mr-5 md:-mr-10 lg:mr-0 overflow-x-scroll lg:overflow-auto'>
         <div className='mx-auto w-fit pt-10 lg:pt-20 flex gap-10 pr-5 md:pr-10 lg:pr-0'>
-          <PostCard imgUrl={LinkedIn} href='https://www.instagram.com/ajo_squad/' btnText='View LinkedIn Post' />
-          <PostCard imgUrl={Tiktok} href='https://twitter.com/ajos_quad' btnText='View Tiktok Post' />
+          <PostCard imgUrl={LinkedIn} href='https://www.linkedin.com/company/ajosquad-incorporated/' btnText='View LinkedIn Post' />
+          <PostCard imgUrl={Tiktok} href='https://www.tiktok.com/@ajo_squad' btnText='View Tiktok Post' />
           <PostCard imgUrl={Facebook} href='https://web.facebook.com/profile.php?id=61554877149543' btnText='View Facebook Post' />
-          <PostCard imgUrl={Instagram} href='https://web.facebook.com/profile.php?id=61554877149543' btnText='View Instagram Post' />
+          <PostCard imgUrl={Instagram} href='https://www.instagram.com/ajo_squad/' btnText='View Instagram Post' />
         </div>
       </div>
       <Image className='hidden lg:block absolute bottom-0 -right-24 z-10' src={BgImage} alt='image' />
