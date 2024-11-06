@@ -53,7 +53,9 @@ const Products = () => {
                         </Zoom>
 
                         <Zoom triggerOnce delay={600}>
-                            <img src='/assets/house-2.png' className='w-full my-4 mx-auto md:-ml-2' alt="AjoHomes Investment" />
+                            <div className="w-full h-[300px]">
+                                <img src='/assets/average-home.jpg' className='w-full object-cover rounded-lg shadow-lg  h-full my-4 mx-auto' alt="AjoHomes Investment" />
+                            </div>
                         </Zoom>
 
                         <Fade direction="up" triggerOnce delay={800}>

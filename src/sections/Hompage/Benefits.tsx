@@ -93,7 +93,7 @@ const Benefits = () => {
                 <Slide direction="right" className='order-1 md:order-last' triggerOnce>
                     <div className='w-full md:max-w-[525.5px]'>
                         <Zoom triggerOnce duration={1000}>
-                            <img src='/assets/house-image.png' alt="AjoHomes Investment" />
+                            <img src='/assets/house.gif' alt="AjoHomes Investment" />
                         </Zoom>
                     </div>
                 </Slide>
