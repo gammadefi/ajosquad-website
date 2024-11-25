@@ -51,7 +51,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const { id } = context.params!;
   const { query } = context;
 
-  let url = 'https://ajosquad-backend.onrender.com/blog?limit=6';
+  let url = 'https://api.ajosquad.com/blog?limit=6';
 
   if (query.tag) url = url + `&tags=${query.tag}`;
 
@@ -59,7 +59,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
   const responses = await Promise.all([
     fetch(url),
-    fetch(`https://ajosquad-backend.onrender.com/blog/${id}`)
+    fetch(`https://api.ajosquad.com/blog/${id}`)
   ]);
   const data1 = await responses[0].json();
   const data2 = await responses[1].json();

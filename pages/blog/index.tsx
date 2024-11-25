@@ -44,12 +44,12 @@ export default index
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { query }: any = context;
 
-  let url = 'https://ajosquad-backend.onrender.com/blog?limit=6';
+  let url = 'https://api.ajosquad.com/blog?limit=6';
   if (query.page) {
-    url = `https://ajosquad-backend.onrender.com/blog?limit=6&page=${query.page}`;
+    url = `https://api.ajosquad.com/blog?limit=6&page=${query.page}`;
   }
   const responses = await Promise.all([
-    axios.get("https://ajosquad-backend.onrender.com/blog"),
+    axios.get("https://api.ajosquad.com/blog"),
     axios.get(url)
   ]);
 
