@@ -22,7 +22,7 @@ const GalleryPage = () => {
     // Fetch single gallery item
     const getSingleGallery = async () => {
         try {
-            const res = await axios.get(`https://ajosquad-backend.onrender.com/gallery/${id}`);
+            const res = await axios.get(`https://api.ajosquad.com/gallery/${id}`);
             setData(res.data?.data);
         } catch (error) {
             console.error('Error fetching single gallery:', error);
@@ -35,7 +35,7 @@ const GalleryPage = () => {
         if (data?.tags && data?.tags.length > 0) {
             try {
                 const response = await axios.get(
-                    `https://ajosquad-backend.onrender.com/gallery?page=${page}&limit=9&tags=${data?.tags[0]}`
+                    `https://api.ajosquad.com/gallery?page=${page}&limit=9&tags=${data?.tags[0]}`
                 );
                 setRelated(response.data.data);
             } catch (error) {

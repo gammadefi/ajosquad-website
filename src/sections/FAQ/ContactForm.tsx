@@ -24,7 +24,7 @@ const ContactForm = () => {
     }),
     onSubmit: async (values, { setSubmitting, resetForm }) => {
       try {
-        await axios.post('https://ajosquad-backend.onrender.com/contact-us', values);
+        await axios.post('https://api.ajosquad.com/contact-us', values);
         toast.success('Message sent successfully');
         resetForm();
       } catch (error) {

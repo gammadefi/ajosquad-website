@@ -31,7 +31,7 @@ const Main = () => {
 
             try {
                 const response = await axios.get(
-                    `https://ajosquad-backend.onrender.com/gallery?page=${page}&limit=9&tags=${filterBy}`
+                    `https://api.ajosquad.com/gallery?page=${page}&limit=9&tags=${filterBy}`
                 );
                 setGalleryItems(response.data.data); // Set gallery items from API response
                 setTotalPages(response.data.totalPages)
