@@ -12,7 +12,7 @@ const Hero = () => {
             <h5 className='text-white font-medium md:text-2xl'>
               Coming soon!!!
             </h5>
-            <h1 className='md:text-7xl text-4xl font-medium font-ageo'>Ajosquad</h1>
+            <h1 className='md:text-7xl text-4xl font-medium font-ageo'>AjoHomes</h1>
             <h3 className='lg:w-11/12 md:text-5xl lg:text-7xl text-3xl lg:leading-[72px] font-light font-ageo'>
               A Novel Way to Invest in Real Estate
             </h3>

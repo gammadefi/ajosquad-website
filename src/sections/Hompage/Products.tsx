@@ -26,7 +26,7 @@ const Products = () => {
                         </Fade>
 
                         <Zoom triggerOnce delay={600}>
-                            <img src='/assets/squad.png' className='w-full mx-auto md:-ml-2' alt="AjoSquad Savings" />
+                            <img src='/assets/squad2.png' className='w-full mx-auto md:-ml-2' alt="AjoSquad Savings" />
                         </Zoom>
 
                         <Fade direction="up" triggerOnce delay={800}>

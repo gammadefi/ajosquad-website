@@ -17,7 +17,7 @@ const AboutUs = () => {
         <Zoom triggerOnce className='lg:w-1/2'>
           <Slide direction='left' triggerOnce>
             <img
-              src='/assets/about-us.png'
+              src='/assets/about-us2.png'
               alt='About Ajosquad'
               className='h-full mx-auto lg:rounded-lg shadow-lg'
             />
