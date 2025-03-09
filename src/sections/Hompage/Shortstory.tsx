@@ -17,7 +17,7 @@ const Shortstory = () => {
                 {/* Image Section with Flip effect */}
                 <Bounce direction="left" triggerOnce delay={200}>
                     <div className='w-full mx-auto'>
-                        <img src='/assets/about.png' alt="About us" className='rounded-xl shadow-lg' />
+                        <img src='/assets/about2.png' alt="About us" className='rounded-xl shadow-lg' />
                     </div>
                 </Bounce>
 
@@ -35,24 +35,24 @@ const Shortstory = () => {
                         {/* Stats Section */}
 
                         <p className='md:text-2xl text-xl leading-7 font-light'>
-                            Our members have saved and we have made payouts of approx $420,000 in 9months with 0% default rate. We can call it <span className='font-semibold'>“Our Score Card”</span>
+                            Our members have saved and we have made payouts of approx $1,000,000+ in 1yr+ with 0% default rate. We can call it <span className='font-semibold'>“Our Score Card”</span>
                         </p>
                         <div className='flex my-8 justify-evenly md:justify-start items-center gap-12'>
                             <Zoom triggerOnce>
                                 <div>
-                                    <h3 className='font-extrabold text-3xl gradient-text text-center md:text-4xl'>9</h3>
-                                    <span className='text-sm text-center'>Months</span>
+                                    <h3 className='font-extrabold text-3xl gradient-text text-center md:text-4xl'>1+</h3>
+                                    <span className='text-sm text-center'>Years</span>
                                 </div>
                             </Zoom>
                             <Zoom triggerOnce delay={200}>
                                 <div>
-                                    <h3 className='font-extrabold text-3xl gradient-text text-center md:text-4xl'>100+</h3>
+                                    <h3 className='font-extrabold text-3xl gradient-text text-center md:text-4xl'>300+</h3>
                                     <span className='text-sm text-center'>Active Users</span>
                                 </div>
                             </Zoom>
                             <Zoom triggerOnce delay={400}>
                                 <div>
-                                    <h3 className='font-extrabold text-3xl gradient-text text-center md:text-4xl'>30+</h3>
+                                    <h3 className='font-extrabold text-3xl gradient-text text-center md:text-4xl'>60+</h3>
                                     <span className='text-sm text-center'>Completed Squad</span>
                                 </div>
                             </Zoom>
