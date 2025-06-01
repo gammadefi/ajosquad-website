@@ -127,7 +127,7 @@ const Drawer = ({ isOpen, setIsOpen, hasHero }: INO) => {
                                         "border-primary text-primary"
                                     )}
                                     target='_blank'
-                                    href="https://app.ajosquad.com/squads/login"
+                                    href="https://portal.ajosquad.com"
                                 >
                                     <span className='gradient-text'>Login</span>
 
@@ -135,7 +135,7 @@ const Drawer = ({ isOpen, setIsOpen, hasHero }: INO) => {
                                 <Link
                                     target='_blank'
                                     className="border w-full text-center text-white rounded-lg bg-primary hover:bg-primary-hover px-4 py-2"
-                                    href="https://app.ajosquad.com/register"
+                                    href="https://portal.ajosquad.com/sign-up"
                                 >
                                     Sign Up
                                 </Link>

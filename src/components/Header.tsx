@@ -111,14 +111,14 @@ export default function Header({ hasHero }: { hasHero?: boolean }) {
               "border rounded-lg px-4 py-2",
               hasHero ? "border-white" : "border-primary text-primary"
             )}
-            href="https://app.ajosquad.com/squads/login"
+            href="https://portal.ajosquad.com"
           >
             Login
           </Link>
           <Link
             target='_blank'
             className="text-white rounded-lg bg-primary hover:bg-primary-hover px-4 py-2"
-            href="https://app.ajosquad.com/register"
+            href="https://portal.ajosquad.com/sign-up"
           >
             Sign Up
           </Link>
