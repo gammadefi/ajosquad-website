@@ -18,7 +18,7 @@ const Hero = () => {
             <h5 className='text-white md:text-xl my-4'>
               Who We Are, What We Do. Get to know the people and principles behind Ajosquad.
             </h5>
-            <Link className='text-lg my-3 rounded-lg shadow shadow-[#2F2B431A] block w-full md:w-fit text-center px-4 py-3 md:px-16 bg-white' href="https://app.ajosquad.com/register"><span className='gradient-text'>Try Ajosquad now</span></Link>
+            <Link className='text-lg my-3 rounded-lg shadow shadow-[#2F2B431A] block w-full md:w-fit text-center px-4 py-3 md:px-16 bg-white' target='_blank' href="https://portal.ajosquad.com/register"><span className='gradient-text'>Try Ajosquad now</span></Link>
           </div>
         </Fade>
       </div>
